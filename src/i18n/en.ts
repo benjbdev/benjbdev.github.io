@@ -4,12 +4,16 @@ export interface Translations {
     description: string;
   };
   nav: {
+    logo: string;
     about: string;
     services: string;
     experience: string;
     contact: string;
+    openMenu: string;
+    switchLang: string;
   };
   hero: {
+    greeting: string;
     label: string;
     tagline: string;
     subtitle: string;
@@ -45,6 +49,8 @@ export interface Translations {
     intro: string;
     bookTitle: string;
     bookSubtext: string;
+    linkedinTitle: string;
+    linkedinLink: string;
     formTitle: string;
     formName: string;
     formEmail: string;
@@ -66,12 +72,16 @@ export const en: Translations = {
       'Principal Architect and Technology Advisor helping product companies navigate critical architecture and platform decisions.',
   },
   nav: {
+    logo: 'b.',
     about: 'About',
     services: 'Services',
     experience: 'Experience',
     contact: 'Contact',
+    openMenu: 'Open menu',
+    switchLang: 'Switch to',
   },
   hero: {
+    greeting: "Hey, I'm Benjamin.",
     label: 'principal architect & technology advisor',
     tagline: 'Principal architect and technology advisor.',
     subtitle:
@@ -138,6 +148,8 @@ export const en: Translations = {
       "Part-time, remote-first. On-site visits available for workshops and kickoffs. Typical engagement: 1 to 6 months, scoped to a clear outcome. Whether you're a co-founder, CTO, or executive navigating a technical inflection point — I'd be glad to hear from you.",
     bookTitle: 'Book a 30-min call',
     bookSubtext: 'Pick a time that works for you — no commitment.',
+    linkedinTitle: 'Follow me there',
+    linkedinLink: 'linkedin.com/in/benjamin-bellantonio →',
     formTitle: 'Send a message',
     formName: 'Name',
     formEmail: 'Email',

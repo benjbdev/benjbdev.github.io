@@ -21,18 +21,34 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 fade-in-hidden">
-          <!-- Book a call -->
-          <div>
-            <p class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec] mb-4">{t.contact.bookTitle}</p>
-            <p class="font-mono text-sm text-[#888] mb-4">{t.contact.bookSubtext}</p>
-            <a
-              href={bookCallUrl || '#'}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="font-mono text-sm border border-[#1a1a1a] dark:border-[#f0f0ec] text-[#1a1a1a] dark:text-[#f0f0ec] px-4 py-2 rounded-md inline-block hover:bg-[#1a1a1a] dark:hover:bg-[#f0f0ec] hover:text-[#f5f5f0] dark:hover:text-[#1a1a1a] transition-colors"
-            >
-              {t.contact.bookTitle} →
-            </a>
+          <!-- Left column: Book a call + LinkedIn -->
+          <div class="flex flex-col gap-10">
+            <!-- Book a call -->
+            <div>
+              <p class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec] mb-4">{t.contact.bookTitle}</p>
+              <p class="font-mono text-sm text-[#888] mb-4">{t.contact.bookSubtext}</p>
+              <a
+                href={bookCallUrl || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-mono text-sm border border-[#1a1a1a] dark:border-[#f0f0ec] text-[#1a1a1a] dark:text-[#f0f0ec] px-4 py-2 rounded-md inline-block hover:bg-[#1a1a1a] dark:hover:bg-[#f0f0ec] hover:text-[#f5f5f0] dark:hover:text-[#1a1a1a] transition-colors"
+              >
+                {t.contact.bookTitle} →
+              </a>
+            </div>
+
+            <!-- LinkedIn -->
+            <div>
+              <p class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec] mb-4">{t.contact.linkedinTitle}</p>
+              <a
+                href="https://linkedin.com/in/benjamin-bellantonio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-mono text-sm text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] transition-colors"
+              >
+                {t.contact.linkedinLink}
+              </a>
+            </div>
           </div>
 
           <!-- Contact form -->

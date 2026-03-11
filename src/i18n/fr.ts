@@ -7,12 +7,16 @@ export const fr: Translations = {
       "Architecte Principal et Conseiller Technologique, j'aide les sociétés produit à naviguer les décisions critiques d'architecture et de plateforme.",
   },
   nav: {
+    logo: 'b.',
     about: 'À propos',
     services: 'Services',
     experience: 'Expérience',
     contact: 'Contact',
+    openMenu: 'Ouvrir le menu',
+    switchLang: 'Passer en',
   },
   hero: {
+    greeting: 'Bonjour, je suis Benjamin.',
     label: 'architecte principal & conseiller technologique',
     tagline: 'Architecte principal et conseiller technologique.',
     subtitle:
@@ -79,6 +83,8 @@ export const fr: Translations = {
       "Temps partiel, remote-first. Déplacements possibles pour workshops et kickoffs. Engagement typique : 1 à 6 mois, cadré sur un résultat précis. Co-fondateur, CTO, ou dirigeant face à un point d'inflexion technique — je serai ravi d'échanger avec vous.",
     bookTitle: 'Réserver un appel de 30 min',
     bookSubtext: 'Choisissez un créneau — sans engagement.',
+    linkedinTitle: 'Me suivre',
+    linkedinLink: 'linkedin.com/in/benjamin-bellantonio →',
     formTitle: 'Envoyer un message',
     formName: 'Nom',
     formEmail: 'Email',

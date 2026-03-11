@@ -1,5 +1,4 @@
 ---
-import { Linkedin } from '@lucide/astro';
 import type { Translations } from '../i18n/index';
 
 interface Props {
@@ -11,20 +10,9 @@ const { t } = Astro.props;
 
 <footer class="py-8 bg-[#F8F8F8] dark:bg-[#0A0A0A]">
   <div class="max-w-[1024px] mx-auto px-6">
-    <div class="flex items-center justify-between gap-4 flex-wrap">
-      <span class="font-sans text-xs text-[#888]">
-        © <span id="footer-year"></span> {t.footer.name}
-      </span>
-      <a
-        href="https://linkedin.com/in/benjamin-bellantonio"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-        class="font-sans text-xs text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] transition-colors"
-      >
-        <Linkedin size={16} />
-      </a>
-    </div>
+    <span class="font-sans text-xs text-[#888]">
+      © <span id="footer-year"></span> {t.footer.name}
+    </span>
   </div>
 </footer>
 

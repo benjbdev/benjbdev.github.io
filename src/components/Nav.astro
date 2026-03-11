@@ -14,8 +14,8 @@ const altLang = lang === 'en' ? 'fr' : 'en';
 <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent bg-[#f5f5f0]/90 dark:bg-[#0f0f0d]/90 backdrop-blur-sm border-[#e0e0e0] dark:border-[#2a2a2a]">
   <div class="max-w-[1024px] mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Logo -->
-    <a href="#" class="font-sans text-base font-extrabold tracking-tight hover:opacity-70 transition-opacity">
-      B.
+    <a href="#" class="font-script text-[46px] font-bold leading-none hover:opacity-70 transition-opacity">
+      {t.nav.logo}
     </a>
 
     <!-- Desktop nav -->
@@ -26,7 +26,7 @@ const altLang = lang === 'en' ? 'fr' : 'en';
       <a
         href={`/${altLang}/`}
         data-lang={altLang}
-        aria-label={`Switch to ${altLang}`}
+        aria-label={`${t.nav.switchLang} ${altLang}`}
         class="flex items-center gap-1.5 font-sans text-sm text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] transition-colors border border-[#e0e0e0] dark:border-[#2a2a2a] rounded-md px-2 py-1"
       >
         <Languages size={14} />
@@ -39,13 +39,13 @@ const altLang = lang === 'en' ? 'fr' : 'en';
       <a
         href={`/${altLang}/`}
         data-lang={altLang}
-        aria-label={`Switch to ${altLang}`}
+        aria-label={`${t.nav.switchLang} ${altLang}`}
         class="flex items-center gap-1 font-sans text-sm text-[#888] border border-[#e0e0e0] dark:border-[#2a2a2a] rounded-md px-2 py-1"
       >
         <Languages size={13} />
         <span class="uppercase">{altLang}</span>
       </a>
-      <button id="menu-toggle" aria-label="Open menu" class="text-[#888]">
+      <button id="menu-toggle" aria-label={t.nav.openMenu} class="text-[#888]">
         <Menu size={18} />
       </button>
     </div>
