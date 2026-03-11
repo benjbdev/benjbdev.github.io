@@ -1,5 +1,5 @@
 ---
-import { Menu } from '@lucide/astro';
+import { Menu, Languages } from '@lucide/astro';
 import type { Translations } from '../i18n/index';
 
 interface Props {
@@ -15,21 +15,22 @@ const altLang = lang === 'en' ? 'fr' : 'en';
   <div class="max-w-[1024px] mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Logo -->
     <a href="#" class="font-sans text-base font-extrabold tracking-tight hover:opacity-70 transition-opacity">
-      Benjamin B.
+      B.
     </a>
 
     <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-6">
-      <a href="#about" class="font-sans text-xs tracking-wide text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.about}</a>
-      <a href="#services" class="font-sans text-xs tracking-wide text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.services}</a>
-      <a href="#background" class="font-sans text-xs tracking-wide text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.experience}</a>
-      <a href="#contact" class="font-sans text-xs tracking-wide text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.contact}</a>
+      <a href="#about" class="font-sans text-sm text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.about}</a>
+      <a href="#services" class="font-sans text-sm text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.services}</a>
+      <a href="#contact" class="font-sans text-sm text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.contact}</a>
       <a
         href={`/${altLang}/`}
         data-lang={altLang}
-        class="font-sans text-xs uppercase tracking-widest text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] transition-colors"
+        aria-label={`Switch to ${altLang}`}
+        class="flex items-center gap-1.5 font-sans text-sm text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] transition-colors border border-[#e0e0e0] dark:border-[#2a2a2a] rounded-md px-2 py-1"
       >
-        {altLang}
+        <Languages size={14} />
+        <span class="uppercase">{altLang}</span>
       </a>
     </div>
 
@@ -38,9 +39,11 @@ const altLang = lang === 'en' ? 'fr' : 'en';
       <a
         href={`/${altLang}/`}
         data-lang={altLang}
-        class="font-sans text-xs uppercase tracking-widest text-[#888]"
+        aria-label={`Switch to ${altLang}`}
+        class="flex items-center gap-1 font-sans text-sm text-[#888] border border-[#e0e0e0] dark:border-[#2a2a2a] rounded-md px-2 py-1"
       >
-        {altLang}
+        <Languages size={13} />
+        <span class="uppercase">{altLang}</span>
       </a>
       <button id="menu-toggle" aria-label="Open menu" class="text-[#888]">
         <Menu size={18} />
@@ -51,10 +54,9 @@ const altLang = lang === 'en' ? 'fr' : 'en';
   <!-- Mobile menu -->
   <div class="md:hidden">
     <div id="mobile-menu" class="hidden border-t border-[#e0e0e0] dark:border-[#2a2a2a] px-6 py-4 flex flex-col gap-4 bg-[#f5f5f0] dark:bg-[#0f0f0d]">
-      <a href="#about" class="font-sans text-xs text-[#888]">{t.nav.about}</a>
-      <a href="#services" class="font-sans text-xs text-[#888]">{t.nav.services}</a>
-      <a href="#background" class="font-sans text-xs text-[#888]">{t.nav.experience}</a>
-      <a href="#contact" class="font-sans text-xs text-[#888]">{t.nav.contact}</a>
+      <a href="#about" class="font-sans text-sm text-[#888]">{t.nav.about}</a>
+      <a href="#services" class="font-sans text-sm text-[#888]">{t.nav.services}</a>
+      <a href="#contact" class="font-sans text-sm text-[#888]">{t.nav.contact}</a>
     </div>
   </div>
 </nav>

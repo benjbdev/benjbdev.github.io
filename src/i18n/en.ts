@@ -55,7 +55,7 @@ export interface Translations {
     formError: string;
   };
   footer: {
-    copy: string;
+    name: string;
   };
 }
 
@@ -148,6 +148,6 @@ export const en: Translations = {
     formError: 'Something went wrong. Please try again or email me directly.',
   },
   footer: {
-    copy: '© 2025 Benjamin Bellantonio',
+    name: 'Benjamin Bellantonio',
   },
 };

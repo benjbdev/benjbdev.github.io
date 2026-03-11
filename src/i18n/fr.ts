@@ -89,6 +89,6 @@ export const fr: Translations = {
     formError: "Une erreur s'est produite. Veuillez réessayer ou me contacter par email.",
   },
   footer: {
-    copy: '© 2025 Benjamin Bellantonio',
+    name: 'Benjamin Bellantonio',
   },
 };

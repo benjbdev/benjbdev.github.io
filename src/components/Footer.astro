@@ -1,5 +1,5 @@
 ---
-import { Linkedin, Github } from '@lucide/astro';
+import { Linkedin } from '@lucide/astro';
 import type { Translations } from '../i18n/index';
 
 interface Props {
@@ -13,28 +13,21 @@ const { t } = Astro.props;
   <div class="max-w-[1024px] mx-auto px-6">
     <div class="flex items-center justify-between gap-4 flex-wrap">
       <span class="font-sans text-xs text-[#888]">
-        {t.footer.copy}
+        © <span id="footer-year"></span> {t.footer.name}
       </span>
-      <div class="flex items-center gap-4">
-        <a
-          href="https://linkedin.com/in/benjamin-bellantonio"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          class="font-sans text-xs text-[#888] hover:underline transition-colors"
-        >
-          <Linkedin size={16} />
-        </a>
-        <a
-          href="https://github.com/benjbdev"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          class="font-sans text-xs text-[#888] hover:underline transition-colors"
-        >
-          <Github size={16} />
-        </a>
-      </div>
+      <a
+        href="https://linkedin.com/in/benjamin-bellantonio"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        class="font-sans text-xs text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] transition-colors"
+      >
+        <Linkedin size={16} />
+      </a>
     </div>
   </div>
 </footer>
+
+<script is:inline>
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
