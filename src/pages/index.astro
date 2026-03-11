@@ -1,0 +1,26 @@
+---
+// Root redirect page — redirects to /en/ or /fr/ based on browser language
+---
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting…</title>
+    <meta http-equiv="refresh" content="0;url=/en/" />
+    <script is:inline>
+      (function () {
+        var saved = localStorage.getItem('lang');
+        if (saved === 'fr') {
+          window.location.replace('/fr/');
+        } else if (!saved && navigator.language && navigator.language.toLowerCase().startsWith('fr')) {
+          window.location.replace('/fr/');
+        } else {
+          window.location.replace('/en/');
+        }
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,46 @@
+---
+import type { Translations } from '../i18n/index';
+
+interface Props {
+  t: Translations;
+}
+
+const { t } = Astro.props;
+---
+
+<section id="about" class="py-24 border-t border-[#0F0F0F]/[.08]">
+  <div class="max-w-5xl mx-auto px-6">
+    <p class="font-mono text-xs uppercase tracking-widest text-blue-600 mb-8">
+      {t.about.label}
+    </p>
+
+    <p class="text-base leading-relaxed text-[#0F0F0F]/80 mb-10 max-w-2xl">
+      {t.about.bio}
+    </p>
+
+    <h3 class="text-sm font-semibold text-[#0F0F0F] mb-4">
+      {t.about.whenTitle}
+    </h3>
+    <ul class="space-y-2 mb-12">
+      {t.about.whenList.map((item) => (
+        <li class="flex items-start gap-3 text-sm text-[#0F0F0F]/70 leading-relaxed">
+          <span class="text-blue-600 font-mono mt-0.5 shrink-0">→</span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      {t.about.stats.map((stat) => (
+        <div class="p-4 border border-[#0F0F0F]/[.08] bg-[#F8F8F8]">
+          <div class="font-mono text-xl font-semibold text-blue-600">
+            {stat.value}
+          </div>
+          <div class="text-xs text-[#0F0F0F]/50 mt-1">
+            {stat.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+---
+import type { Translations } from '../i18n/index';
+
+interface Props {
+  lang: 'en' | 'fr';
+  t: Translations;
+}
+
+const { t } = Astro.props;
+---
+
+<section id="hero" class="min-h-screen flex items-center pt-16">
+  <div class="max-w-5xl mx-auto px-6 py-24 w-full">
+    <p class="font-mono text-xs uppercase tracking-widest text-blue-600 mb-6">
+      {t.hero.label}<span class="cursor-blink ml-0.5">_</span>
+    </p>
+    <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl text-[#0F0F0F] mb-6 leading-[1.1] tracking-tight">
+      Benjamin Bellantonio
+    </h1>
+    <p class="text-base sm:text-lg leading-relaxed text-[#0F0F0F]/70 max-w-2xl mb-10">
+      {t.hero.subtitle}
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a
+        href="#services"
+        class="inline-block bg-blue-600 text-white px-6 py-3 text-sm font-medium hover:bg-blue-700 transition-colors"
+      >
+        {t.hero.cta1}
+      </a>
+      <a
+        href="#contact"
+        class="inline-block border border-[#0F0F0F]/20 text-[#0F0F0F] px-6 py-3 text-sm font-medium hover:border-[#0F0F0F]/50 transition-colors"
+      >
+        {t.hero.cta2}
+      </a>
+    </div>
+  </div>
+</section>

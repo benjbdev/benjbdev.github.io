@@ -1,0 +1,50 @@
+---
+import { Search, Layers, ArrowUpRight } from '@lucide/astro';
+import type { Translations } from '../i18n/index';
+
+interface Props {
+  t: Translations;
+}
+
+const { t } = Astro.props;
+---
+
+<section id="services" class="py-24 border-t border-[#0F0F0F]/[.08]">
+  <div class="max-w-5xl mx-auto px-6">
+    <p class="font-mono text-xs uppercase tracking-widest text-blue-600 mb-8">
+      {t.services.label}
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 border border-[#0F0F0F]/[.08] bg-[#F8F8F8]">
+        <Search size={24} class="text-blue-600 mb-4" />
+        <h3 class="font-semibold text-sm text-[#0F0F0F] mb-3">
+          {t.services.cards[0].title}
+        </h3>
+        <p class="text-sm leading-relaxed text-[#0F0F0F]/60">
+          {t.services.cards[0].description}
+        </p>
+      </div>
+
+      <div class="p-6 border border-[#0F0F0F]/[.08] bg-[#F8F8F8]">
+        <Layers size={24} class="text-blue-600 mb-4" />
+        <h3 class="font-semibold text-sm text-[#0F0F0F] mb-3">
+          {t.services.cards[1].title}
+        </h3>
+        <p class="text-sm leading-relaxed text-[#0F0F0F]/60">
+          {t.services.cards[1].description}
+        </p>
+      </div>
+
+      <div class="p-6 border border-[#0F0F0F]/[.08] bg-[#F8F8F8]">
+        <ArrowUpRight size={24} class="text-blue-600 mb-4" />
+        <h3 class="font-semibold text-sm text-[#0F0F0F] mb-3">
+          {t.services.cards[2].title}
+        </h3>
+        <p class="text-sm leading-relaxed text-[#0F0F0F]/60">
+          {t.services.cards[2].description}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

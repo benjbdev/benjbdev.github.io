@@ -1,0 +1,83 @@
+---
+import { Menu } from '@lucide/astro';
+import type { Translations } from '../i18n/index';
+
+interface Props {
+  lang: 'en' | 'fr';
+  t: Translations;
+}
+
+const { lang, t } = Astro.props;
+const altLang = lang === 'en' ? 'fr' : 'en';
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-[#0F0F0F]/[.08]">
+  <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="font-mono text-sm font-semibold tracking-tight hover:text-blue-600 transition-colors">
+      BB
+    </a>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-6">
+      <a href="#about" class="text-sm text-[#0F0F0F]/60 hover:text-[#0F0F0F] transition-colors">{t.nav.about}</a>
+      <a href="#services" class="text-sm text-[#0F0F0F]/60 hover:text-[#0F0F0F] transition-colors">{t.nav.services}</a>
+      <a href="#background" class="text-sm text-[#0F0F0F]/60 hover:text-[#0F0F0F] transition-colors">{t.nav.experience}</a>
+      <a href="#contact" class="text-sm text-[#0F0F0F]/60 hover:text-[#0F0F0F] transition-colors">{t.nav.contact}</a>
+      <a
+        href={`/${altLang}/`}
+        data-lang={altLang}
+        class="font-mono text-xs uppercase tracking-widest text-[#0F0F0F]/40 hover:text-blue-600 transition-colors border border-[#0F0F0F]/[.12] px-2 py-1"
+      >
+        {altLang}
+      </a>
+    </div>
+
+    <!-- Mobile: lang + hamburger -->
+    <div class="flex md:hidden items-center gap-3">
+      <a
+        href={`/${altLang}/`}
+        data-lang={altLang}
+        class="font-mono text-xs uppercase tracking-widest text-[#0F0F0F]/40 border border-[#0F0F0F]/[.12] px-2 py-1"
+      >
+        {altLang}
+      </a>
+      <button id="menu-toggle" aria-label="Open menu" class="text-[#0F0F0F]/60">
+        <Menu size={20} />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="md:hidden">
+    <div id="mobile-menu" class="hidden border-t border-[#0F0F0F]/[.08] px-6 py-4 flex flex-col gap-4 bg-white">
+      <a href="#about" class="text-sm text-[#0F0F0F]/60">{t.nav.about}</a>
+      <a href="#services" class="text-sm text-[#0F0F0F]/60">{t.nav.services}</a>
+      <a href="#background" class="text-sm text-[#0F0F0F]/60">{t.nav.experience}</a>
+      <a href="#contact" class="text-sm text-[#0F0F0F]/60">{t.nav.contact}</a>
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  // Language preference persistence
+  document.querySelectorAll('[data-lang]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      localStorage.setItem('lang', el.getAttribute('data-lang'));
+    });
+  });
+
+  // Mobile menu toggle
+  var menuToggle = document.getElementById('menu-toggle');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+</script>
