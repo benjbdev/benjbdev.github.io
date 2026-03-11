@@ -1,7 +1,9 @@
 ---
-import '@fontsource-variable/montserrat';
-import '@fontsource-variable/dm-sans';
-import '@fontsource/space-mono/400.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/jetbrains-mono/400.css';
+import '@fontsource/jetbrains-mono/500.css';
 import '../styles/global.css';
 
 interface Props {
@@ -43,7 +45,19 @@ const ogImageURL = new URL('/og-image.png', Astro.site);
       ></script>
     )}
   </head>
-  <body class="bg-white text-[#0F0F0F] font-sans">
+  <body class="bg-[#f5f5f0] dark:bg-[#0f0f0d] text-[#1a1a1a] dark:text-[#f0f0ec] font-mono">
     <slot />
+    <script is:inline>
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('fade-in-visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.fade-in-hidden').forEach(function(el) {
+        observer.observe(el);
+      });
+    </script>
   </body>
 </html>

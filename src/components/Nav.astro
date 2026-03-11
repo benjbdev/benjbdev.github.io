@@ -11,23 +11,23 @@ const { lang, t } = Astro.props;
 const altLang = lang === 'en' ? 'fr' : 'en';
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-[#0F0F0F]/[.08]">
-  <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent bg-[#f5f5f0]/90 dark:bg-[#0f0f0d]/90 backdrop-blur-sm border-[#e0e0e0] dark:border-[#2a2a2a]">
+  <div class="max-w-[1024px] mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Logo -->
-    <a href="#" class="font-mono text-sm font-semibold tracking-tight hover:text-blue-600 transition-colors">
-      BB
+    <a href="#" class="font-sans text-base font-extrabold tracking-tight hover:opacity-70 transition-opacity">
+      Benjamin B.
     </a>
 
     <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-6">
-      <a href="#about" class="text-sm text-[#0F0F0F]/60 hover:text-[#0F0F0F] transition-colors">{t.nav.about}</a>
-      <a href="#services" class="text-sm text-[#0F0F0F]/60 hover:text-[#0F0F0F] transition-colors">{t.nav.services}</a>
-      <a href="#background" class="text-sm text-[#0F0F0F]/60 hover:text-[#0F0F0F] transition-colors">{t.nav.experience}</a>
-      <a href="#contact" class="text-sm text-[#0F0F0F]/60 hover:text-[#0F0F0F] transition-colors">{t.nav.contact}</a>
+      <a href="#about" class="font-sans text-xs tracking-wide text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.about}</a>
+      <a href="#services" class="font-sans text-xs tracking-wide text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.services}</a>
+      <a href="#background" class="font-sans text-xs tracking-wide text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.experience}</a>
+      <a href="#contact" class="font-sans text-xs tracking-wide text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.contact}</a>
       <a
         href={`/${altLang}/`}
         data-lang={altLang}
-        class="font-mono text-xs uppercase tracking-widest text-[#0F0F0F]/40 hover:text-blue-600 transition-colors border border-[#0F0F0F]/[.12] px-2 py-1"
+        class="font-sans text-xs uppercase tracking-widest text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] transition-colors"
       >
         {altLang}
       </a>
@@ -38,28 +38,44 @@ const altLang = lang === 'en' ? 'fr' : 'en';
       <a
         href={`/${altLang}/`}
         data-lang={altLang}
-        class="font-mono text-xs uppercase tracking-widest text-[#0F0F0F]/40 border border-[#0F0F0F]/[.12] px-2 py-1"
+        class="font-sans text-xs uppercase tracking-widest text-[#888]"
       >
         {altLang}
       </a>
-      <button id="menu-toggle" aria-label="Open menu" class="text-[#0F0F0F]/60">
-        <Menu size={20} />
+      <button id="menu-toggle" aria-label="Open menu" class="text-[#888]">
+        <Menu size={18} />
       </button>
     </div>
   </div>
 
   <!-- Mobile menu -->
   <div class="md:hidden">
-    <div id="mobile-menu" class="hidden border-t border-[#0F0F0F]/[.08] px-6 py-4 flex flex-col gap-4 bg-white">
-      <a href="#about" class="text-sm text-[#0F0F0F]/60">{t.nav.about}</a>
-      <a href="#services" class="text-sm text-[#0F0F0F]/60">{t.nav.services}</a>
-      <a href="#background" class="text-sm text-[#0F0F0F]/60">{t.nav.experience}</a>
-      <a href="#contact" class="text-sm text-[#0F0F0F]/60">{t.nav.contact}</a>
+    <div id="mobile-menu" class="hidden border-t border-[#e0e0e0] dark:border-[#2a2a2a] px-6 py-4 flex flex-col gap-4 bg-[#f5f5f0] dark:bg-[#0f0f0d]">
+      <a href="#about" class="font-sans text-xs text-[#888]">{t.nav.about}</a>
+      <a href="#services" class="font-sans text-xs text-[#888]">{t.nav.services}</a>
+      <a href="#background" class="font-sans text-xs text-[#888]">{t.nav.experience}</a>
+      <a href="#contact" class="font-sans text-xs text-[#888]">{t.nav.contact}</a>
     </div>
   </div>
 </nav>
 
 <script is:inline>
+  // Sticky nav: transparent at top, opaque on scroll
+  var nav = document.getElementById('main-nav');
+  var SCROLLED_ADD = ['bg-[#f5f5f0]/90', 'dark:bg-[#0f0f0d]/90', 'backdrop-blur-sm', 'border-[#e0e0e0]', 'dark:border-[#2a2a2a]'];
+  var SCROLLED_REMOVE = ['border-transparent'];
+  function updateNav() {
+    if (window.scrollY > 40) {
+      SCROLLED_ADD.forEach(function(c) { nav.classList.add(c); });
+      SCROLLED_REMOVE.forEach(function(c) { nav.classList.remove(c); });
+    } else {
+      SCROLLED_ADD.forEach(function(c) { nav.classList.remove(c); });
+      SCROLLED_REMOVE.forEach(function(c) { nav.classList.add(c); });
+    }
+  }
+  updateNav();
+  window.addEventListener('scroll', updateNav, { passive: true });
+
   // Language preference persistence
   document.querySelectorAll('[data-lang]').forEach(function (el) {
     el.addEventListener('click', function () {

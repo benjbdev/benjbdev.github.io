@@ -11,6 +11,7 @@ export interface Translations {
   };
   hero: {
     label: string;
+    tagline: string;
     subtitle: string;
     cta1: string;
     cta2: string;
@@ -29,6 +30,10 @@ export interface Translations {
       title: string;
       description: string;
     }>;
+    cta: {
+      title: string;
+      description: string;
+    };
   };
   background: {
     label: string;
@@ -40,6 +45,7 @@ export interface Translations {
     intro: string;
     bookTitle: string;
     bookSubtext: string;
+    formTitle: string;
     formName: string;
     formEmail: string;
     formCompany: string;
@@ -66,14 +72,15 @@ export const en: Translations = {
     contact: 'Contact',
   },
   hero: {
-    label: '// principal architect & technology advisor',
+    label: 'principal architect & technology advisor',
+    tagline: 'Principal architect and technology advisor.',
     subtitle:
       'I help product companies navigate critical architecture and platform decisions as their systems and teams evolve — not as a consultant who delivers reports and disappears, but as a senior technical partner.',
     cta1: 'See my services',
     cta2: 'Get in touch',
   },
   about: {
-    label: '// about',
+    label: 'About',
     bio: '15+ years designing and operating distributed systems in production. Most recently Director of Technology at CoachHub, acting as technical right-hand to the CPTO — owning architectural direction across core backend systems, leading cross-team system design, and shipping AIMY, an event-driven AI coaching platform, from zero to production in 6 months. Experience across early-stage startups through scale-ups in France, Malaysia, and internationally. Remote-native.',
     whenTitle: 'When companies reach out',
     whenList: [
@@ -93,7 +100,7 @@ export const en: Translations = {
     ],
   },
   services: {
-    label: '// services',
+    label: 'Services',
     cards: [
       {
         icon: 'Search',
@@ -114,18 +121,24 @@ export const en: Translations = {
           'Advisory and hands-on support during high-stakes platform initiatives: migrations, re-architectures, scaling initiatives, or post-acquisition integration. Scoped to the initiative.',
       },
     ],
+    cta: {
+      title: "Not sure which fits? Let's figure it out together.",
+      description:
+        "Every engagement starts with a conversation. We define your goals, map the constraints, and shape the scope around the outcome you actually need — not a fixed package.",
+    },
   },
   background: {
-    label: '// background',
+    label: 'Background',
     bio: '15+ years designing and operating distributed systems in production. Most recently Director of Technology at CoachHub, acting as technical right-hand to the CPTO. Experience across early-stage startups through scale-ups in France, Malaysia, and internationally.',
     cta: 'View full profile on LinkedIn →',
   },
   contact: {
-    label: '// get in touch',
+    label: 'Get in touch',
     intro:
       "Part-time, remote-first. On-site visits available for workshops and kickoffs. Typical engagement: 1 to 6 months, scoped to a clear outcome. Whether you're a co-founder, CTO, or executive navigating a technical inflection point — I'd be glad to hear from you.",
     bookTitle: 'Book a 30-min call',
     bookSubtext: 'Pick a time that works for you — no commitment.',
+    formTitle: 'Send a message',
     formName: 'Name',
     formEmail: 'Email',
     formCompany: 'Company (optional)',

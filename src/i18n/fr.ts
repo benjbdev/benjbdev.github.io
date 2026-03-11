@@ -13,14 +13,15 @@ export const fr: Translations = {
     contact: 'Contact',
   },
   hero: {
-    label: '// architecte principal & conseiller technologique',
+    label: 'architecte principal & conseiller technologique',
+    tagline: 'Architecte principal et conseiller technologique.',
     subtitle:
       "J'aide les sociétés produit à naviguer les décisions critiques d'architecture et de plateforme à mesure que leurs systèmes et équipes évoluent — pas comme un consultant qui remet un rapport et disparaît, mais comme un vrai partenaire technique senior.",
     cta1: 'Voir mes services',
     cta2: 'Me contacter',
   },
   about: {
-    label: '// à propos',
+    label: 'À propos',
     bio: "Plus de 15 ans à concevoir et opérer des systèmes distribués en production. Dernièrement Directeur Technique chez CoachHub, bras droit technique du CPTO — pilotant la direction architecturale des systèmes backend, animant la conception de systèmes transverses, et livrant AIMY, une plateforme de coaching IA event-driven, de zéro à la production en 6 mois. Expérience en startups early-stage et scale-ups en France, en Malaisie et à l'international. Remote-native.",
     whenTitle: 'Quand les entreprises font appel à moi',
     whenList: [
@@ -40,7 +41,7 @@ export const fr: Translations = {
     ],
   },
   services: {
-    label: '// services',
+    label: 'Services',
     cards: [
       {
         icon: 'Search',
@@ -61,18 +62,24 @@ export const fr: Translations = {
           "Conseil et support opérationnel sur des initiatives de plateforme critiques : migrations, re-architectures, initiatives de scaling, ou intégration post-acquisition. Cadré sur l'initiative.",
       },
     ],
+    cta: {
+      title: "Pas sûr de ce qu'il vous faut ? Définissons-le ensemble.",
+      description:
+        "Chaque engagement commence par une conversation. On définit vos objectifs, on cartographie les contraintes, et on façonne le périmètre autour du résultat dont vous avez vraiment besoin — pas un forfait figé.",
+    },
   },
   background: {
-    label: '// parcours',
+    label: 'Parcours',
     bio: "Plus de 15 ans à concevoir et opérer des systèmes distribués en production. Dernièrement Directeur Technique chez CoachHub, bras droit technique du CPTO. Expérience en startups early-stage et scale-ups en France, en Malaisie et à l'international.",
     cta: 'Voir le profil complet sur LinkedIn →',
   },
   contact: {
-    label: '// me contacter',
+    label: 'Me contacter',
     intro:
       "Temps partiel, remote-first. Déplacements possibles pour workshops et kickoffs. Engagement typique : 1 à 6 mois, cadré sur un résultat précis. Co-fondateur, CTO, ou dirigeant face à un point d'inflexion technique — je serai ravi d'échanger avec vous.",
     bookTitle: 'Réserver un appel de 30 min',
     bookSubtext: 'Choisissez un créneau — sans engagement.',
+    formTitle: 'Envoyer un message',
     formName: 'Nom',
     formEmail: 'Email',
     formCompany: 'Entreprise (optionnel)',

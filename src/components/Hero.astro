@@ -9,30 +9,30 @@ interface Props {
 const { t } = Astro.props;
 ---
 
-<section id="hero" class="min-h-screen flex items-center pt-16">
-  <div class="max-w-5xl mx-auto px-6 py-24 w-full">
-    <p class="font-mono text-xs uppercase tracking-widest text-blue-600 mb-6">
-      {t.hero.label}<span class="cursor-blink ml-0.5">_</span>
-    </p>
-    <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl text-[#0F0F0F] mb-6 leading-[1.1] tracking-tight">
-      Benjamin Bellantonio
+<section id="hero" class="min-h-screen flex flex-col justify-center">
+  <div class="max-w-[1024px] mx-auto px-6 py-24 w-full">
+    <h1 class="font-sans font-bold text-[4em] text-[#1a1a1a] dark:text-[#f0f0ec] leading-[1.1] tracking-tight mb-8">
+      Hey, I'm Benjamin.<br />{t.hero.tagline}
     </h1>
-    <p class="text-base sm:text-lg leading-relaxed text-[#0F0F0F]/70 max-w-2xl mb-10">
-      {t.hero.subtitle}
-    </p>
-    <div class="flex flex-wrap gap-4">
-      <a
-        href="#services"
-        class="inline-block bg-blue-600 text-white px-6 py-3 text-sm font-medium hover:bg-blue-700 transition-colors"
-      >
-        {t.hero.cta1}
-      </a>
-      <a
-        href="#contact"
-        class="inline-block border border-[#0F0F0F]/20 text-[#0F0F0F] px-6 py-3 text-sm font-medium hover:border-[#0F0F0F]/50 transition-colors"
-      >
-        {t.hero.cta2}
-      </a>
+
+    <div>
+      <p class="font-mono text-sm leading-relaxed text-[#555] dark:text-[#999] mb-8">
+        {t.hero.subtitle}
+      </p>
+      <div class="flex flex-wrap gap-4 items-center">
+        <a
+          href="#services"
+          class="font-mono text-sm border border-[#1a1a1a] dark:border-[#f0f0ec] text-[#1a1a1a] dark:text-[#f0f0ec] px-4 py-2 rounded-md hover:bg-[#1a1a1a] dark:hover:bg-[#f0f0ec] hover:text-[#f5f5f0] dark:hover:text-[#1a1a1a] transition-colors"
+        >
+          {t.hero.cta1}
+        </a>
+        <a
+          href="#contact"
+          class="font-mono text-sm text-[#1a1a1a] dark:text-[#f0f0ec] underline underline-offset-4 hover:no-underline transition-all"
+        >
+          {t.hero.cta2}
+        </a>
+      </div>
     </div>
   </div>
 </section>

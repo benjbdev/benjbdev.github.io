@@ -11,47 +11,41 @@ const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID;
 const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
 ---
 
-<section id="contact" class="py-24 border-t border-[#0F0F0F]/[.08]">
-  <div class="max-w-5xl mx-auto px-6">
-    <p class="font-mono text-xs uppercase tracking-widest text-blue-600 mb-8">
-      {t.contact.label}
-    </p>
-
-    <p class="text-base leading-relaxed text-[#0F0F0F]/70 max-w-2xl mb-12">
-      {t.contact.intro}
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Book a call -->
-      <div class="p-6 border border-[#0F0F0F]/[.08] bg-[#F8F8F8] flex flex-col justify-between">
-        <div>
-          <h3 class="font-semibold text-[#0F0F0F] mb-2">
-            {t.contact.bookTitle}
-          </h3>
-          <p class="text-sm text-[#0F0F0F]/60 mb-6">
-            {t.contact.bookSubtext}
-          </p>
-        </div>
-        <a
-          href={bookCallUrl || '#'}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block bg-blue-600 text-white px-5 py-2.5 text-sm font-medium hover:bg-blue-700 transition-colors text-center"
-        >
-          {t.contact.bookTitle}
-        </a>
-      </div>
-
-      <!-- Contact form -->
+<section id="contact" class="py-24 bg-white dark:bg-[#141414]">
+  <div class="max-w-[1024px] mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8">
+      <div class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec]">{t.contact.label}</div>
       <div>
+        <p class="font-mono text-base leading-relaxed text-[#555] dark:text-[#999] mb-10 fade-in-hidden">
+          {t.contact.intro}
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 fade-in-hidden">
+          <!-- Book a call -->
+          <div>
+            <p class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec] mb-4">{t.contact.bookTitle}</p>
+            <p class="font-mono text-sm text-[#888] mb-4">{t.contact.bookSubtext}</p>
+            <a
+              href={bookCallUrl || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-mono text-sm border border-[#1a1a1a] dark:border-[#f0f0ec] text-[#1a1a1a] dark:text-[#f0f0ec] px-4 py-2 rounded-md inline-block hover:bg-[#1a1a1a] dark:hover:bg-[#f0f0ec] hover:text-[#f5f5f0] dark:hover:text-[#1a1a1a] transition-colors"
+            >
+              {t.contact.bookTitle} →
+            </a>
+          </div>
+
+          <!-- Contact form -->
+          <div>
+            <p class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec] mb-4">{t.contact.formTitle}</p>
         <form
           id="contact-form"
           action={`https://formspree.io/f/${formspreeId}`}
           method="POST"
-          class="flex flex-col gap-4"
+          class="flex flex-col gap-6 fade-in-hidden"
         >
           <div>
-            <label for="name" class="block text-xs text-[#0F0F0F]/60 mb-1">
+            <label for="name" class="block font-mono text-sm text-[#888] mb-1">
               {t.contact.formName} *
             </label>
             <input
@@ -59,12 +53,12 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
               id="name"
               name="name"
               required
-              class="w-full bg-transparent border border-[#0F0F0F]/[.15] px-3 py-2 text-sm text-[#0F0F0F] placeholder-[#0F0F0F]/30 focus:outline-none focus:border-blue-600 transition-colors"
+              class="w-full bg-transparent border-0 border-b border-[#e0e0e0] dark:border-[#333] rounded-none font-mono text-sm text-[#1a1a1a] dark:text-[#f0f0ec] focus:border-[#1a1a1a] dark:focus:border-[#f0f0ec] focus:outline-none py-2 transition-colors"
             />
           </div>
 
           <div>
-            <label for="email" class="block text-xs text-[#0F0F0F]/60 mb-1">
+            <label for="email" class="block font-mono text-sm text-[#888] mb-1">
               {t.contact.formEmail} *
             </label>
             <input
@@ -72,24 +66,24 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
               id="email"
               name="email"
               required
-              class="w-full bg-transparent border border-[#0F0F0F]/[.15] px-3 py-2 text-sm text-[#0F0F0F] placeholder-[#0F0F0F]/30 focus:outline-none focus:border-blue-600 transition-colors"
+              class="w-full bg-transparent border-0 border-b border-[#e0e0e0] dark:border-[#333] rounded-none font-mono text-sm text-[#1a1a1a] dark:text-[#f0f0ec] focus:border-[#1a1a1a] dark:focus:border-[#f0f0ec] focus:outline-none py-2 transition-colors"
             />
           </div>
 
           <div>
-            <label for="company" class="block text-xs text-[#0F0F0F]/60 mb-1">
+            <label for="company" class="block font-mono text-sm text-[#888] mb-1">
               {t.contact.formCompany}
             </label>
             <input
               type="text"
               id="company"
               name="company"
-              class="w-full bg-transparent border border-[#0F0F0F]/[.15] px-3 py-2 text-sm text-[#0F0F0F] placeholder-[#0F0F0F]/30 focus:outline-none focus:border-blue-600 transition-colors"
+              class="w-full bg-transparent border-0 border-b border-[#e0e0e0] dark:border-[#333] rounded-none font-mono text-sm text-[#1a1a1a] dark:text-[#f0f0ec] focus:border-[#1a1a1a] dark:focus:border-[#f0f0ec] focus:outline-none py-2 transition-colors"
             />
           </div>
 
           <div>
-            <label for="message" class="block text-xs text-[#0F0F0F]/60 mb-1">
+            <label for="message" class="block font-mono text-sm text-[#888] mb-1">
               {t.contact.formMessage} *
             </label>
             <textarea
@@ -97,29 +91,33 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
               name="message"
               required
               rows={4}
-              class="w-full bg-transparent border border-[#0F0F0F]/[.15] px-3 py-2 text-sm text-[#0F0F0F] placeholder-[#0F0F0F]/30 focus:outline-none focus:border-blue-600 transition-colors resize-none"
+              class="w-full bg-transparent border-0 border-b border-[#e0e0e0] dark:border-[#333] rounded-none font-mono text-sm text-[#1a1a1a] dark:text-[#f0f0ec] focus:border-[#1a1a1a] dark:focus:border-[#f0f0ec] focus:outline-none py-2 transition-colors resize-none"
             ></textarea>
           </div>
 
           <div
             id="form-error"
-            class="hidden text-sm text-red-600 bg-red-50 border border-red-200 px-3 py-2"
+            class="hidden font-mono text-sm text-[#555] dark:text-[#999] border-l-2 border-[#555] dark:border-[#999] pl-3 py-1"
           >
             {t.contact.formError}
           </div>
 
-          <button
-            id="submit-btn"
-            type="submit"
-            class="bg-blue-600 text-white px-5 py-2.5 text-sm font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {t.contact.formSubmit}
-          </button>
+          <div>
+            <button
+              id="submit-btn"
+              type="submit"
+              class="font-mono text-sm border border-[#1a1a1a] dark:border-[#f0f0ec] text-[#1a1a1a] dark:text-[#f0f0ec] px-4 py-2 rounded-md hover:bg-[#1a1a1a] dark:hover:bg-[#f0f0ec] hover:text-[#f5f5f0] dark:hover:text-[#1a1a1a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {t.contact.formSubmit}
+            </button>
+          </div>
         </form>
 
-        <div id="form-success" class="hidden text-sm text-green-700 bg-green-50 border border-green-200 px-4 py-3">
+        <div id="form-success" class="hidden font-mono text-sm text-[#555] dark:text-[#999] border-l-2 border-[#1a1a1a] dark:border-[#f0f0ec] pl-3 py-1">
           {t.contact.formSuccess}
         </div>
+          </div> <!-- end form column -->
+        </div> <!-- end 2-col grid -->
       </div>
     </div>
   </div>

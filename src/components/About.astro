@@ -8,39 +8,39 @@ interface Props {
 const { t } = Astro.props;
 ---
 
-<section id="about" class="py-24 border-t border-[#0F0F0F]/[.08]">
-  <div class="max-w-5xl mx-auto px-6">
-    <p class="font-mono text-xs uppercase tracking-widest text-blue-600 mb-8">
-      {t.about.label}
-    </p>
+<section id="about" class="py-24 bg-white dark:bg-[#141414]">
+  <div class="max-w-[1024px] mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8">
+      <div class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec]">{t.about.label}</div>
+      <div>
+        <p class="font-mono text-base leading-relaxed text-[#555] dark:text-[#999] mb-8 fade-in-hidden">
+          {t.about.bio}
+        </p>
 
-    <p class="text-base leading-relaxed text-[#0F0F0F]/80 mb-10 max-w-2xl">
-      {t.about.bio}
-    </p>
+        <h3 class="font-sans text-base font-semibold mb-3 fade-in-hidden">
+          {t.about.whenTitle}
+        </h3>
+        <ul class="space-y-2 mb-10">
+          {t.about.whenList.map((item) => (
+            <li class="border-l-2 border-[#1a1a1a] dark:border-[#f0f0ec] pl-3 py-1 font-mono text-base text-[#555] dark:text-[#999] leading-relaxed fade-in-hidden">
+              {item}
+            </li>
+          ))}
+        </ul>
 
-    <h3 class="text-sm font-semibold text-[#0F0F0F] mb-4">
-      {t.about.whenTitle}
-    </h3>
-    <ul class="space-y-2 mb-12">
-      {t.about.whenList.map((item) => (
-        <li class="flex items-start gap-3 text-sm text-[#0F0F0F]/70 leading-relaxed">
-          <span class="text-blue-600 font-mono mt-0.5 shrink-0">→</span>
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
-
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-      {t.about.stats.map((stat) => (
-        <div class="p-4 border border-[#0F0F0F]/[.08] bg-[#F8F8F8]">
-          <div class="font-mono text-xl font-semibold text-blue-600">
-            {stat.value}
-          </div>
-          <div class="text-xs text-[#0F0F0F]/50 mt-1">
-            {stat.label}
-          </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 fade-in-hidden">
+          {t.about.stats.map((stat) => (
+            <div>
+              <div class="font-sans font-bold text-3xl text-[#1a1a1a] dark:text-[#f0f0ec]">
+                {stat.value}
+              </div>
+              <div class="font-mono text-sm text-[#888] mt-1">
+                {stat.label}
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   </div>
 </section>

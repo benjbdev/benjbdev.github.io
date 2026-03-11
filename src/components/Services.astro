@@ -1,5 +1,4 @@
 ---
-import { Search, Layers, ArrowUpRight } from '@lucide/astro';
 import type { Translations } from '../i18n/index';
 
 interface Props {
@@ -7,43 +6,47 @@ interface Props {
 }
 
 const { t } = Astro.props;
+
+const cardBgs = [
+  'bg-[#ededea] dark:bg-[#1e1e1c]',
+  'bg-[#e5e5e2] dark:bg-[#222220]',
+  'bg-[#ddddd9] dark:bg-[#262624]',
+];
 ---
 
-<section id="services" class="py-24 border-t border-[#0F0F0F]/[.08]">
-  <div class="max-w-5xl mx-auto px-6">
-    <p class="font-mono text-xs uppercase tracking-widest text-blue-600 mb-8">
-      {t.services.label}
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="p-6 border border-[#0F0F0F]/[.08] bg-[#F8F8F8]">
-        <Search size={24} class="text-blue-600 mb-4" />
-        <h3 class="font-semibold text-sm text-[#0F0F0F] mb-3">
-          {t.services.cards[0].title}
-        </h3>
-        <p class="text-sm leading-relaxed text-[#0F0F0F]/60">
-          {t.services.cards[0].description}
-        </p>
-      </div>
-
-      <div class="p-6 border border-[#0F0F0F]/[.08] bg-[#F8F8F8]">
-        <Layers size={24} class="text-blue-600 mb-4" />
-        <h3 class="font-semibold text-sm text-[#0F0F0F] mb-3">
-          {t.services.cards[1].title}
-        </h3>
-        <p class="text-sm leading-relaxed text-[#0F0F0F]/60">
-          {t.services.cards[1].description}
-        </p>
-      </div>
-
-      <div class="p-6 border border-[#0F0F0F]/[.08] bg-[#F8F8F8]">
-        <ArrowUpRight size={24} class="text-blue-600 mb-4" />
-        <h3 class="font-semibold text-sm text-[#0F0F0F] mb-3">
-          {t.services.cards[2].title}
-        </h3>
-        <p class="text-sm leading-relaxed text-[#0F0F0F]/60">
-          {t.services.cards[2].description}
-        </p>
+<section id="services" class="py-24">
+  <div class="max-w-[1024px] mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8">
+      <div class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec]">{t.services.label}</div>
+      <div class="flex flex-col gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {t.services.cards.map((card, i) => (
+            <div class={`${cardBgs[i]} p-8 rounded-xl fade-in-hidden flex flex-col gap-4`}>
+              <h3 class="font-sans text-lg font-bold leading-snug text-[#1a1a1a] dark:text-[#f0f0ec]">
+                {card.title}
+              </h3>
+              <p class="font-mono text-sm leading-relaxed text-[#1a1a1a] dark:text-[#f0f0ec]">
+                {card.description}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div class="bg-[#1a1a1a] dark:bg-[#0A0A0A] p-8 rounded-xl fade-in-hidden flex flex-col sm:flex-row sm:items-center gap-4">
+          <div class="flex-1">
+            <h3 class="font-sans text-lg font-bold leading-snug text-white mb-2">
+              {t.services.cta.title}
+            </h3>
+            <p class="font-mono text-sm leading-relaxed text-[#999]">
+              {t.services.cta.description}
+            </p>
+          </div>
+          <a
+            href="#contact"
+            class="font-mono text-sm border border-[#f0f0ec] text-[#f0f0ec] px-4 py-2 rounded-md hover:bg-[#f0f0ec] hover:text-[#1a1a1a] transition-colors whitespace-nowrap self-start sm:self-center"
+          >
+            {t.hero.cta2} →
+          </a>
+        </div>
       </div>
     </div>
   </div>
