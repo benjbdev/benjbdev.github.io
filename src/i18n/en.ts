@@ -7,14 +7,12 @@ export interface Translations {
     logo: string;
     about: string;
     services: string;
-    experience: string;
     contact: string;
     openMenu: string;
     switchLang: string;
   };
   hero: {
     greeting: string;
-    label: string;
     tagline: string;
     subtitle: string;
     cta1: string;
@@ -30,7 +28,6 @@ export interface Translations {
   services: {
     label: string;
     cards: Array<{
-      icon: string;
       title: string;
       description: string;
     }>;
@@ -38,11 +35,6 @@ export interface Translations {
       title: string;
       description: string;
     };
-  };
-  background: {
-    label: string;
-    bio: string;
-    cta: string;
   };
   contact: {
     label: string;
@@ -75,14 +67,12 @@ export const en: Translations = {
     logo: "b.",
     about: "About",
     services: "Services",
-    experience: "Experience",
     contact: "Contact",
     openMenu: "Open menu",
     switchLang: "Switch to",
   },
   hero: {
-    greeting: "Hey, I'm Benjamin.",
-    label: "principal architect & technology advisor",
+    greeting: "Hey, I'm Benjamin 🤓",
     tagline:
       'Principal architect and <br class="hidden sm:block">technology advisor.',
     subtitle:
@@ -114,19 +104,16 @@ export const en: Translations = {
     label: "Services",
     cards: [
       {
-        icon: "Search",
         title: "Architecture & Platform Assessment",
         description:
           "A focused engagement (2–6 weeks) to diagnose architecture and platform health, identify highest-leverage problems, and produce a clear, prioritized action plan. Deliverable: a report and workshop your team can act on immediately.",
       },
       {
-        icon: "Layers",
         title: "Fractional Principal Architect",
         description:
           "Ongoing part-time engagement (up to 3 days/week) providing senior architectural guidance across system design, technical decision-making, engineering mentorship, and platform evolution. I embed with your leadership and senior engineers, not above them.",
       },
       {
-        icon: "ArrowUpRight",
         title: "Platform Transformation Support",
         description:
           "Advisory and hands-on support during high-stakes platform initiatives: migrations, re-architectures, scaling initiatives, or post-acquisition integration. Scoped to the initiative.",
@@ -137,11 +124,6 @@ export const en: Translations = {
       description:
         "Every engagement starts with a conversation. We define your goals, map the constraints, and shape the scope around the outcome you actually need — not a fixed package.",
     },
-  },
-  background: {
-    label: "Background",
-    bio: "15+ years designing and operating distributed systems in production. Most recently Director of Technology at CoachHub, acting as technical right-hand to the CPTO. Experience across early-stage startups through scale-ups in France, Malaysia, and internationally.",
-    cta: "View full profile on LinkedIn →",
   },
   contact: {
     label: "Get in touch",

@@ -11,14 +11,12 @@ export const fr: Translations = {
     logo: "b.",
     about: "À propos",
     services: "Services",
-    experience: "Expérience",
     contact: "Contact",
     openMenu: "Ouvrir le menu",
     switchLang: "Passer en",
   },
   hero: {
-    greeting: "Bonjour, je suis Benjamin.",
-    label: "architecte principal & conseiller technologique",
+    greeting: "Bonjour, je suis Benjamin 🤓",
     tagline:
       'Architecte principal et <br class="hidden sm:block">conseiller technologique.',
     subtitle:
@@ -50,19 +48,16 @@ export const fr: Translations = {
     label: "Services",
     cards: [
       {
-        icon: "Search",
         title: "Architecture & Audit de Plateforme",
         description:
           "Un engagement focalisé (2–6 semaines) pour diagnostiquer la santé de votre architecture et plateforme, identifier les problèmes à fort levier, et produire un plan d'action clair et priorisé. Livrable : un rapport et un workshop sur lequel votre équipe peut agir immédiatement.",
       },
       {
-        icon: "Layers",
         title: "Architecte Principal Fractionnel",
         description:
           "Engagement part-time continu (jusqu'à 3 jours/semaine) apportant une guidance architecturale senior sur la conception système, la prise de décision technique, le mentoring engineering, et l'évolution de plateforme. Je m'intègre avec vos leaders et ingénieurs senior, pas au-dessus d'eux.",
       },
       {
-        icon: "ArrowUpRight",
         title: "Support de Transformation Plateforme",
         description:
           "Conseil et support opérationnel sur des initiatives de plateforme critiques : migrations, re-architectures, initiatives de scaling, ou intégration post-acquisition. Cadré sur l'initiative.",
@@ -73,11 +68,6 @@ export const fr: Translations = {
       description:
         "Chaque engagement commence par une conversation. On définit vos objectifs, on cartographie les contraintes, et on façonne le périmètre autour du résultat dont vous avez vraiment besoin — pas un forfait figé.",
     },
-  },
-  background: {
-    label: "Parcours",
-    bio: "Plus de 15 ans à concevoir et opérer des systèmes distribués en production. Dernièrement Directeur Technique chez CoachHub, bras droit technique du CPTO. Expérience en startups early-stage et scale-ups en France, en Malaisie et à l'international.",
-    cta: "Voir le profil complet sur LinkedIn →",
   },
   contact: {
     label: "Me contacter",
