@@ -56,7 +56,7 @@ export const fr: Translations = {
       {
         title: "Revue Architecture & Plateforme",
         description:
-          "Une mission ciblée (2–6 semaines) pour évaluer l’architecture et la santé de la plateforme, identifier les principaux problèmes et produire un plan d’action priorisé.<br><br>Livrable : un rapport clair et une session de travail directement exploitable par l’équipe.",
+          "Une mission ciblée (2–6 semaines) pour évaluer l’architecture et la santé de la plateforme et identifier les principaux problèmes.<br><br>Livrable : Un plan d’action priorisé et une session de travail directement actionnable par votre équipe",
       },
       {
         title: "Fractional Principal Engineer",
@@ -100,7 +100,8 @@ export const fr: Translations = {
     modal: {
       title: "Mentions légales & Confidentialité",
       legalTitle: "Informations légales",
-      legalIntro: "Ce site est édité par <strong>Benjamin Bellantonio</strong>, conseiller indépendant en technologie.",
+      legalIntro:
+        "Ce site est édité par <strong>Benjamin Bellantonio</strong>, conseiller indépendant en technologie.",
       statusLabel: "Statut",
       statusValue: "Entrepreneur individuel (micro-entrepreneur)",
       activityLabel: "Activité",
@@ -110,15 +111,22 @@ export const fr: Translations = {
       locationLabel: "Localisation",
       locationValue: "Marseille, France",
       hostingLabel: "Hébergement",
-      hostingValue: 'GitHub Pages – GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis — <a href="https://pages.github.com" class="underline">pages.github.com</a>',
+      hostingValue:
+        'GitHub Pages – GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis — <a href="https://pages.github.com" class="underline">pages.github.com</a>',
       privacyTitle: "Confidentialité & Protection des données",
-      privacyP1: "Si vous me contactez via ce site ou par email, les informations que vous fournissez (nom, adresse email, contenu du message) sont utilisées uniquement pour répondre à votre demande ou échanger au sujet d'une éventuelle collaboration.",
-      privacyP2: "Aucune donnée personnelle n'est vendue, partagée avec des tiers, ou utilisée à des fins marketing.",
-      privacyP3: "Les informations peuvent être conservées uniquement le temps nécessaire au traitement de la demande ou à une éventuelle relation professionnelle.",
-      privacyP4: "Conformément au <strong>Règlement Général sur la Protection des Données (RGPD)</strong>, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles.",
+      privacyP1:
+        "Si vous me contactez via ce site ou par email, les informations que vous fournissez (nom, adresse email, contenu du message) sont utilisées uniquement pour répondre à votre demande ou échanger au sujet d'une éventuelle collaboration.",
+      privacyP2:
+        "Aucune donnée personnelle n'est vendue, partagée avec des tiers, ou utilisée à des fins marketing.",
+      privacyP3:
+        "Les informations peuvent être conservées uniquement le temps nécessaire au traitement de la demande ou à une éventuelle relation professionnelle.",
+      privacyP4:
+        "Conformément au <strong>Règlement Général sur la Protection des Données (RGPD)</strong>, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles.",
       commsTitle: "Communication professionnelle",
-      commsP1: "Les informations échangées via ce site ou lors des premiers échanges sont traitées avec discrétion professionnelle.",
-      commsP2: "Cependant, sauf accord explicite, les communications via le formulaire de contact ou par email ne constituent <strong>pas un accord de confidentialité formel (NDA)</strong>.",
+      commsP1:
+        "Les informations échangées via ce site ou lors des premiers échanges sont traitées avec discrétion professionnelle.",
+      commsP2:
+        "Cependant, sauf accord explicite, les communications via le formulaire de contact ou par email ne constituent <strong>pas un accord de confidentialité formel (NDA)</strong>.",
     },
   },
 };

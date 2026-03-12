@@ -139,7 +139,7 @@ export const en: Translations = {
       {
         title: "Architecture & Platform Review",
         description:
-          "A focused engagement (2–6 weeks) to evaluate architecture and platform health, identify key architectural issues and produce a prioritized action plan.<br><br>Deliverable: a clear report and working session your team can act on immediately.",
+          "A focused engagement (2–6 weeks) to evaluate architecture and platform health and identify key architectural issues.<br><br>Deliverable: a prioritized action plan and working session your team can act on immediately.",
       },
       {
         title: "Fractional Principal Engineer",
@@ -181,7 +181,8 @@ export const en: Translations = {
     modal: {
       title: "Legal & Privacy",
       legalTitle: "Legal Information",
-      legalIntro: "This website is operated by <strong>Benjamin Bellantonio</strong>, independent technology advisor.",
+      legalIntro:
+        "This website is operated by <strong>Benjamin Bellantonio</strong>, independent technology advisor.",
       statusLabel: "Status",
       statusValue: "Individual Entrepreneur (Micro-entrepreneur)",
       activityLabel: "Activity",
@@ -191,15 +192,22 @@ export const en: Translations = {
       locationLabel: "Location",
       locationValue: "Marseille, France",
       hostingLabel: "Hosting",
-      hostingValue: 'GitHub Pages – GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, United States — <a href="https://pages.github.com" class="underline">pages.github.com</a>',
+      hostingValue:
+        'GitHub Pages – GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, United States — <a href="https://pages.github.com" class="underline">pages.github.com</a>',
       privacyTitle: "Confidentiality & Data Protection",
-      privacyP1: "If you contact me through this website or by email, the information you provide (such as your name, email address, and message content) is used solely to respond to your request or discuss a potential collaboration.",
-      privacyP2: "No personal data is sold, shared with third parties, or used for marketing purposes.",
-      privacyP3: "Information may be retained only for the time necessary to handle the discussion or potential professional engagement.",
-      privacyP4: "In accordance with the <strong>General Data Protection Regulation (GDPR)</strong>, you have the right to request access, correction, or deletion of your personal data.",
+      privacyP1:
+        "If you contact me through this website or by email, the information you provide (such as your name, email address, and message content) is used solely to respond to your request or discuss a potential collaboration.",
+      privacyP2:
+        "No personal data is sold, shared with third parties, or used for marketing purposes.",
+      privacyP3:
+        "Information may be retained only for the time necessary to handle the discussion or potential professional engagement.",
+      privacyP4:
+        "In accordance with the <strong>General Data Protection Regulation (GDPR)</strong>, you have the right to request access, correction, or deletion of your personal data.",
       commsTitle: "Professional Communication",
-      commsP1: "Information shared through this website or during initial discussions is treated with professional discretion.",
-      commsP2: "However, unless explicitly agreed otherwise, communication through the contact form or email does <strong>not constitute a formal confidentiality agreement (NDA)</strong>.",
+      commsP1:
+        "Information shared through this website or during initial discussions is treated with professional discretion.",
+      commsP2:
+        "However, unless explicitly agreed otherwise, communication through the contact form or email does <strong>not constitute a formal confidentiality agreement (NDA)</strong>.",
     },
   },
 };
