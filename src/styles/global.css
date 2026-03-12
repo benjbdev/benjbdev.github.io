@@ -8,15 +8,11 @@
 
 :root {
   --bg: #f5f5f0;
-  --bg-dark: #0f0f0d;
   --text: #1a1a1a;
-  --text-dark: #f0f0ec;
   --accent: #2563eb;
   --muted: #888;
   --border: #e0e0e0;
 }
-
-@custom-variant dark (&:where(.dark, .dark *));
 
 @keyframes blink {
   0%, 100% { opacity: 1; }

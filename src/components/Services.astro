@@ -8,30 +8,30 @@ interface Props {
 const { t } = Astro.props;
 
 const cardBgs = [
-  'bg-[#ededea] dark:bg-[#1e1e1c]',
-  'bg-[#e5e5e2] dark:bg-[#222220]',
-  'bg-[#ddddd9] dark:bg-[#262624]',
+  'bg-[#ededea]',
+  'bg-[#e5e5e2]',
+  'bg-[#ddddd9]',
 ];
 ---
 
 <section id="services" class="py-24">
   <div class="max-w-[1024px] mx-auto px-6">
     <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8">
-      <div class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec]">{t.services.label}</div>
+      <div class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a]">{t.services.label}</div>
       <div class="flex flex-col gap-4">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {t.services.cards.map((card, i) => (
             <div class={`${cardBgs[i]} p-8 rounded-xl fade-in-hidden flex flex-col gap-4`}>
-              <h3 class="font-sans text-lg font-bold leading-snug text-[#1a1a1a] dark:text-[#f0f0ec]">
+              <h3 class="font-sans text-lg font-bold leading-snug text-[#1a1a1a]">
                 {card.title}
               </h3>
-              <p class="font-mono text-sm leading-relaxed text-[#1a1a1a] dark:text-[#f0f0ec]">
+              <p class="font-mono text-sm leading-relaxed text-[#1a1a1a]">
                 {card.description}
               </p>
             </div>
           ))}
         </div>
-        <div class="bg-[#1a1a1a] dark:bg-[#0A0A0A] p-8 rounded-xl fade-in-hidden flex flex-col sm:flex-row sm:items-center gap-4">
+        <div class="bg-[#1a1a1a] p-8 rounded-xl fade-in-hidden flex flex-col sm:flex-row sm:items-center gap-4">
           <div class="flex-1">
             <h3 class="font-sans text-lg font-bold leading-snug text-white mb-2">
               {t.services.cta.title}

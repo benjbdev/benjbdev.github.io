@@ -25,7 +25,7 @@ A single-page personal consulting website for **Benjamin Bellantonio**, hosted o
 | Concern      | Choice                                       | Notes                                                        |
 | ------------ | -------------------------------------------- | ------------------------------------------------------------ |
 | Framework    | **Astro** (static output)                    | `output: 'static'`, deploy-ready for GH Pages                |
-| Styling      | **Tailwind CSS**                             | Minimal utility-first, dark/light mode via `class` strategy  |
+| Styling      | **Tailwind CSS**                             | Minimal utility-first, light mode only                       |
 | Language     | TypeScript                                   | Strict mode                                                  |
 | i18n         | Astro i18n routing                           | `/en/` and `/fr/` routes, default to browser language        |
 | Contact Form | **Formspree** (free tier)                    | See section 7                                                |
@@ -40,7 +40,7 @@ A single-page personal consulting website for **Benjamin Bellantonio**, hosted o
 
 - **Minimalist** — generous whitespace, no decorative clutter
 - **Tech-flavored** — subtle grid/dot background, monospace accents for labels/tags, code-style syntax for section markers
-- **White/Dark mode** — system preference default, manual toggle persisted in `localStorage`
+- **Light mode only** — no dark mode toggle
 - **Typography-first** — content hierarchy through type scale, not heavy visuals
 - **Responsive** — mobile-first, single breakpoint expansion (sm → full)
 - **No animations except subtle fade-in on scroll** — nothing distracting
@@ -48,9 +48,8 @@ A single-page personal consulting website for **Benjamin Bellantonio**, hosted o
 ### Color Palette (tokens)
 
 ```
-light:  background #FFFFFF, surface #F8F8F8, text #0F0F0F, accent #2563EB (blue)
-dark:   background #0A0A0A, surface #141414, text #F0F0F0, accent #3B82F6
-border: 1px solid with 8% opacity on text color
+background #f5f5f0, surface #F8F8F8, text #1a1a1a, accent #2563EB (blue, used sparingly)
+border: #e0e0e0
 ```
 
 ### Typography Scale
@@ -100,7 +99,7 @@ All sections use the same layout wrapper: full-width, max-w-3xl centered, vertic
 
 ### 6.1 Navigation
 
-- Fixed top bar, minimal: Logo/name left, lang toggle + dark mode toggle right
+- Fixed top bar, minimal: Logo/name left, lang toggle right
 - Smooth scroll anchors: About · Services · Experience · Contact
 - On mobile: collapsed to icon menu
 
@@ -245,6 +244,8 @@ _(FR translations to be added in `fr.ts`)_
 - Language toggle in Nav persists choice in `localStorage` and navigates between `/en/` and `/fr/`
 - `hreflang` meta tags in `<head>` for SEO
 
+> **Note:** All website copy (headings, body text, labels, CTAs, etc.) is managed exclusively in `src/i18n/en.ts` and `src/i18n/fr.ts`. The copy in this PRD serves as the source of truth for the initial content, but the translation files are the authoritative source once the site is built.
+
 ---
 
 ## 9. SEO & Meta
@@ -355,7 +356,6 @@ PUBLIC_UMAMI_WEBSITE_ID: ${{ secrets.UMAMI_WEBSITE_ID }}
 - [ ] Site builds cleanly with `astro build` and zero warnings
 - [ ] Both `/en/` and `/fr/` routes render correctly with translated content
 - [ ] Language toggle works and persists across reload
-- [ ] Dark mode toggle works and persists across reload
 - [ ] Contact form submits successfully via Formspree and shows inline confirmation
 - [ ] Contact form validates required fields client-side before submission
 - [ ] Lighthouse score ≥ 95 on Performance, Accessibility, SEO

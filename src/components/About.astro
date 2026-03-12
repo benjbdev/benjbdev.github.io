@@ -8,12 +8,12 @@ interface Props {
 const { t } = Astro.props;
 ---
 
-<section id="about" class="py-24 bg-white dark:bg-[#141414]">
+<section id="about" class="py-24 bg-white">
   <div class="max-w-[1024px] mx-auto px-6">
     <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8">
-      <div class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec]">{t.about.label}</div>
+      <div class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a]">{t.about.label}</div>
       <div>
-        <p class="font-mono text-base leading-relaxed text-[#555] dark:text-[#999] mb-8 fade-in-hidden">
+        <p class="font-mono text-base leading-relaxed text-[#555] mb-8 fade-in-hidden">
           {t.about.bio}
         </p>
 
@@ -22,7 +22,7 @@ const { t } = Astro.props;
         </h3>
         <ul class="space-y-2 mb-10">
           {t.about.whenList.map((item) => (
-            <li class="border-l-2 border-[#1a1a1a] dark:border-[#f0f0ec] pl-3 py-1 font-mono text-base text-[#555] dark:text-[#999] leading-relaxed fade-in-hidden">
+            <li class="border-l-2 border-[#1a1a1a] pl-3 py-1 font-mono text-base text-[#555] leading-relaxed fade-in-hidden">
               {item}
             </li>
           ))}
@@ -31,7 +31,7 @@ const { t } = Astro.props;
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 fade-in-hidden">
           {t.about.stats.map((stat) => (
             <div>
-              <div class="font-sans font-bold text-3xl text-[#1a1a1a] dark:text-[#f0f0ec]">
+              <div class="font-sans font-bold text-3xl text-[#1a1a1a]">
                 {stat.value}
               </div>
               <div class="font-mono text-sm text-[#888] mt-1">

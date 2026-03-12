@@ -11,7 +11,7 @@ const { lang, t } = Astro.props;
 const altLang = lang === 'en' ? 'fr' : 'en';
 ---
 
-<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent bg-[#f5f5f0]/90 dark:bg-[#0f0f0d]/90 backdrop-blur-sm border-[#e0e0e0] dark:border-[#2a2a2a]">
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent bg-[#f5f5f0]/90 backdrop-blur-sm border-[#e0e0e0]">
   <div class="max-w-[1024px] mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Logo -->
     <a href="#" class="font-script text-[46px] font-bold leading-none hover:opacity-70 transition-opacity">
@@ -20,14 +20,14 @@ const altLang = lang === 'en' ? 'fr' : 'en';
 
     <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-6">
-      <a href="#about" class="font-sans text-sm text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.about}</a>
-      <a href="#services" class="font-sans text-sm text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.services}</a>
-      <a href="#contact" class="font-sans text-sm text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] hover:underline transition-colors">{t.nav.contact}</a>
+      <a href="#about" class="font-sans text-sm text-[#888] hover:text-[#1a1a1a] hover:underline transition-colors">{t.nav.about}</a>
+      <a href="#services" class="font-sans text-sm text-[#888] hover:text-[#1a1a1a] hover:underline transition-colors">{t.nav.services}</a>
+      <a href="#contact" class="font-sans text-sm text-[#888] hover:text-[#1a1a1a] hover:underline transition-colors">{t.nav.contact}</a>
       <a
         href={`/${altLang}/`}
         data-lang={altLang}
         aria-label={`${t.nav.switchLang} ${altLang}`}
-        class="flex items-center gap-1.5 font-sans text-sm text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] transition-colors border border-[#e0e0e0] dark:border-[#2a2a2a] rounded-md px-2 py-1"
+        class="flex items-center gap-1.5 font-sans text-sm text-[#888] hover:text-[#1a1a1a] transition-colors border border-[#e0e0e0] rounded-md px-2 py-1"
       >
         <Languages size={14} />
         <span class="uppercase">{altLang}</span>
@@ -40,7 +40,7 @@ const altLang = lang === 'en' ? 'fr' : 'en';
         href={`/${altLang}/`}
         data-lang={altLang}
         aria-label={`${t.nav.switchLang} ${altLang}`}
-        class="flex items-center gap-1 font-sans text-sm text-[#888] border border-[#e0e0e0] dark:border-[#2a2a2a] rounded-md px-2 py-1"
+        class="flex items-center gap-1 font-sans text-sm text-[#888] border border-[#e0e0e0] rounded-md px-2 py-1"
       >
         <Languages size={13} />
         <span class="uppercase">{altLang}</span>
@@ -53,7 +53,7 @@ const altLang = lang === 'en' ? 'fr' : 'en';
 
   <!-- Mobile menu -->
   <div class="md:hidden">
-    <div id="mobile-menu" class="hidden border-t border-[#e0e0e0] dark:border-[#2a2a2a] px-6 py-4 flex flex-col gap-4 bg-[#f5f5f0] dark:bg-[#0f0f0d]">
+    <div id="mobile-menu" class="hidden border-t border-b border-[#e0e0e0] px-6 py-4 flex flex-col gap-4 bg-[#f5f5f0]">
       <a href="#about" class="font-sans text-sm text-[#888]">{t.nav.about}</a>
       <a href="#services" class="font-sans text-sm text-[#888]">{t.nav.services}</a>
       <a href="#contact" class="font-sans text-sm text-[#888]">{t.nav.contact}</a>
@@ -64,7 +64,7 @@ const altLang = lang === 'en' ? 'fr' : 'en';
 <script is:inline>
   // Sticky nav: transparent at top, opaque on scroll
   var nav = document.getElementById('main-nav');
-  var SCROLLED_ADD = ['bg-[#f5f5f0]/90', 'dark:bg-[#0f0f0d]/90', 'backdrop-blur-sm', 'border-[#e0e0e0]', 'dark:border-[#2a2a2a]'];
+  var SCROLLED_ADD = ['bg-[#f5f5f0]/90', 'backdrop-blur-sm', 'border-[#e0e0e0]'];
   var SCROLLED_REMOVE = ['border-transparent'];
   function updateNav() {
     if (window.scrollY > 40) {

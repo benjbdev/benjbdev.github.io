@@ -11,12 +11,12 @@ const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID;
 const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
 ---
 
-<section id="contact" class="py-24 bg-white dark:bg-[#141414]">
+<section id="contact" class="py-24 bg-[#1a1a1a]">
   <div class="max-w-[1024px] mx-auto px-6">
     <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8">
-      <div class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec]">{t.contact.label}</div>
+      <div class="font-sans text-xl font-bold uppercase tracking-wide text-white">{t.contact.label}</div>
       <div>
-        <p class="font-mono text-base leading-relaxed text-[#555] dark:text-[#999] mb-10 fade-in-hidden">
+        <p class="font-mono text-base leading-relaxed text-[#999] mb-10 fade-in-hidden">
           {t.contact.intro}
         </p>
 
@@ -25,13 +25,13 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
           <div class="flex flex-col gap-10">
             <!-- Book a call -->
             <div>
-              <p class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec] mb-4">{t.contact.bookTitle}</p>
-              <p class="font-mono text-sm text-[#888] mb-4">{t.contact.bookSubtext}</p>
+              <p class="font-sans text-xl font-bold uppercase tracking-wide text-white mb-4">{t.contact.bookTitle}</p>
+              <p class="font-mono text-sm text-[#999] mb-4">{t.contact.bookSubtext}</p>
               <a
                 href={bookCallUrl || '#'}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="font-mono text-sm border border-[#1a1a1a] dark:border-[#f0f0ec] text-[#1a1a1a] dark:text-[#f0f0ec] px-4 py-2 rounded-md inline-block hover:bg-[#1a1a1a] dark:hover:bg-[#f0f0ec] hover:text-[#f5f5f0] dark:hover:text-[#1a1a1a] transition-colors"
+                class="font-mono text-sm border border-[#f0f0ec] text-[#f0f0ec] px-4 py-2 rounded-md inline-block hover:bg-[#f0f0ec] hover:text-[#1a1a1a] transition-colors"
               >
                 {t.contact.bookTitle} →
               </a>
@@ -39,12 +39,12 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
 
             <!-- LinkedIn -->
             <div>
-              <p class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec] mb-4">{t.contact.linkedinTitle}</p>
+              <p class="font-sans text-xl font-bold uppercase tracking-wide text-white mb-4">{t.contact.linkedinTitle}</p>
               <a
                 href="https://linkedin.com/in/benjamin-bellantonio"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="font-mono text-sm text-[#888] hover:text-[#1a1a1a] dark:hover:text-[#f0f0ec] transition-colors"
+                class="font-mono text-sm text-[#999] hover:text-white transition-colors"
               >
                 {t.contact.linkedinLink}
               </a>
@@ -53,7 +53,7 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
 
           <!-- Contact form -->
           <div>
-            <p class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a] dark:text-[#f0f0ec] mb-4">{t.contact.formTitle}</p>
+            <p class="font-sans text-xl font-bold uppercase tracking-wide text-white mb-4">{t.contact.formTitle}</p>
         <form
           id="contact-form"
           action={`https://formspree.io/f/${formspreeId}`}
@@ -61,7 +61,7 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
           class="flex flex-col gap-6 fade-in-hidden"
         >
           <div>
-            <label for="name" class="block font-mono text-sm text-[#888] mb-1">
+            <label for="name" class="block font-mono text-sm text-[#999] mb-1">
               {t.contact.formName} *
             </label>
             <input
@@ -69,12 +69,12 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
               id="name"
               name="name"
               required
-              class="w-full bg-transparent border-0 border-b border-[#e0e0e0] dark:border-[#333] rounded-none font-mono text-sm text-[#1a1a1a] dark:text-[#f0f0ec] focus:border-[#1a1a1a] dark:focus:border-[#f0f0ec] focus:outline-none py-2 transition-colors"
+              class="w-full bg-transparent border-0 border-b border-[#444] rounded-none font-mono text-sm text-white focus:border-[#f0f0ec] focus:outline-none py-2 transition-colors"
             />
           </div>
 
           <div>
-            <label for="email" class="block font-mono text-sm text-[#888] mb-1">
+            <label for="email" class="block font-mono text-sm text-[#999] mb-1">
               {t.contact.formEmail} *
             </label>
             <input
@@ -82,24 +82,24 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
               id="email"
               name="email"
               required
-              class="w-full bg-transparent border-0 border-b border-[#e0e0e0] dark:border-[#333] rounded-none font-mono text-sm text-[#1a1a1a] dark:text-[#f0f0ec] focus:border-[#1a1a1a] dark:focus:border-[#f0f0ec] focus:outline-none py-2 transition-colors"
+              class="w-full bg-transparent border-0 border-b border-[#444] rounded-none font-mono text-sm text-white focus:border-[#f0f0ec] focus:outline-none py-2 transition-colors"
             />
           </div>
 
           <div>
-            <label for="company" class="block font-mono text-sm text-[#888] mb-1">
+            <label for="company" class="block font-mono text-sm text-[#999] mb-1">
               {t.contact.formCompany}
             </label>
             <input
               type="text"
               id="company"
               name="company"
-              class="w-full bg-transparent border-0 border-b border-[#e0e0e0] dark:border-[#333] rounded-none font-mono text-sm text-[#1a1a1a] dark:text-[#f0f0ec] focus:border-[#1a1a1a] dark:focus:border-[#f0f0ec] focus:outline-none py-2 transition-colors"
+              class="w-full bg-transparent border-0 border-b border-[#444] rounded-none font-mono text-sm text-white focus:border-[#f0f0ec] focus:outline-none py-2 transition-colors"
             />
           </div>
 
           <div>
-            <label for="message" class="block font-mono text-sm text-[#888] mb-1">
+            <label for="message" class="block font-mono text-sm text-[#999] mb-1">
               {t.contact.formMessage} *
             </label>
             <textarea
@@ -107,13 +107,13 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
               name="message"
               required
               rows={4}
-              class="w-full bg-transparent border-0 border-b border-[#e0e0e0] dark:border-[#333] rounded-none font-mono text-sm text-[#1a1a1a] dark:text-[#f0f0ec] focus:border-[#1a1a1a] dark:focus:border-[#f0f0ec] focus:outline-none py-2 transition-colors resize-none"
+              class="w-full bg-transparent border-0 border-b border-[#444] rounded-none font-mono text-sm text-white focus:border-[#f0f0ec] focus:outline-none py-2 transition-colors resize-none"
             ></textarea>
           </div>
 
           <div
             id="form-error"
-            class="hidden font-mono text-sm text-[#555] dark:text-[#999] border-l-2 border-[#555] dark:border-[#999] pl-3 py-1"
+            class="hidden font-mono text-sm text-[#999] border-l-2 border-[#999] pl-3 py-1"
           >
             {t.contact.formError}
           </div>
@@ -122,14 +122,14 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
             <button
               id="submit-btn"
               type="submit"
-              class="font-mono text-sm border border-[#1a1a1a] dark:border-[#f0f0ec] text-[#1a1a1a] dark:text-[#f0f0ec] px-4 py-2 rounded-md hover:bg-[#1a1a1a] dark:hover:bg-[#f0f0ec] hover:text-[#f5f5f0] dark:hover:text-[#1a1a1a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              class="font-mono text-sm border border-[#f0f0ec] text-[#f0f0ec] px-4 py-2 rounded-md hover:bg-[#f0f0ec] hover:text-[#1a1a1a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {t.contact.formSubmit}
             </button>
           </div>
         </form>
 
-        <div id="form-success" class="hidden font-mono text-sm text-[#555] dark:text-[#999] border-l-2 border-[#1a1a1a] dark:border-[#f0f0ec] pl-3 py-1">
+        <div id="form-success" class="hidden font-mono text-sm text-[#999] border-l-2 border-[#f0f0ec] pl-3 py-1">
           {t.contact.formSuccess}
         </div>
           </div> <!-- end form column -->
