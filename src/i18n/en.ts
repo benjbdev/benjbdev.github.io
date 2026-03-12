@@ -15,6 +15,8 @@ export interface Translations {
     greeting: string;
     tagline: string;
     subtitle: string;
+    whenTitle: string;
+    whenList: string[];
     cta1: string;
     cta2: string;
   };
@@ -59,9 +61,10 @@ export interface Translations {
 
 export const en: Translations = {
   meta: {
-    title: "Benjamin Bellantonio — Principal Architect & Technology Advisor",
+    title:
+      "Benjamin Bellantonio | Principal Engineer & Fractional Technology Advisor | Marseille, France",
     description:
-      "Principal Architect and Technology Advisor helping product companies navigate critical architecture and platform decisions.",
+      "Principal Engineer & Fractional Technology Advisor helping product companies navigate critical engineering and architecture decisions as their systems and teams scale.",
   },
   nav: {
     logo: "b.",
@@ -72,55 +75,61 @@ export const en: Translations = {
     switchLang: "Switch to",
   },
   hero: {
-    greeting: "Hey, I'm Benjamin 🤓",
+    greeting: "Hi, I'm Benjamin.",
     tagline:
-      'Principal architect and <br class="hidden sm:block">technology advisor.',
+      'Principal Engineer & <br class="hidden sm:block">Fractional Technology Advisor',
     subtitle:
-      "I help product companies navigate critical architecture and platform decisions as their systems and teams evolve — not as a consultant who delivers reports and disappears, but as a senior technical partner.",
-    cta1: "See my services",
-    cta2: "Get in touch",
+      "Helping product companies navigate <strong>critical engineering and architecture decisions</strong> as their systems and teams scale — not as a consultant delivering reports, but as a <strong>senior technical partner working alongside CTOs and engineering leaders</strong>.",
+    whenTitle: "Typically called when:",
+    whenList: [
+      "architecture starts slowing product velocity",
+      "systems become hard to evolve",
+      "senior technical leadership is missing",
+    ],
+    cta1: "How I help",
+    cta2: "Discuss your situation",
   },
   about: {
     label: "About",
-    bio: "15+ years designing and operating distributed systems in production. Most recently Director of Technology at CoachHub, acting as technical right-hand to the CPTO — owning architectural direction across core backend systems, leading cross-team system design, and shipping AIMY, an event-driven AI coaching platform, from zero to production in 6 months. Experience across early-stage startups through scale-ups in France, Malaysia, and internationally. Remote-native.",
-    whenTitle: "When companies reach out",
+    bio: "15+ years designing and operating <strong>distributed systems in production</strong>.<br><br>Across several companies, I’ve worked as a <strong>Staff / Principal-level engineer and technology leader</strong>, often acting as the <strong>technical right-hand to CTOs or CPTOs</strong> — owning architecture across backend platforms and guiding cross-team technical decisions.<br><br>Experience across <strong>early-stage startups through scale-ups</strong>, working with teams in France, Malaysia, and internationally. <strong>Remote-native</strong>.",
+    whenTitle: "Typical situations",
     whenList: [
-      "Building fast and need architectural foundations that won't become a bottleneck at Series A",
-      "Scaling fast and the architecture is starting to break under pressure",
-      "Re-orging engineering and nobody agrees on service ownership or team boundaries",
-      "Losing product velocity to accumulated technical debt",
-      "A core architect just left and the team needs senior technical continuity",
-      "Over-reliant on third-party vendors with no clear ownership or exit path",
-      "Evaluating a major platform evolution — cloud migration, AI integration, microservices consolidation",
+      "Scaling quickly and the architecture is starting to break under load",
+      "Product velocity slowing due to accumulated technical debt",
+      "Reorganizing engineering and service ownership or team boundaries are unclear",
+      "Building fast and needing architectural foundations that won’t become a bottleneck by Series A",
+      "A core architect or principal engineer has left and the team needs senior technical continuity",
+      "Evaluating a major platform evolution — cloud migration, AI integration, or microservices consolidation",
+      "Over-reliance on third-party vendors without clear ownership or exit strategy",
     ],
     stats: [
-      { value: "15+", label: "Years experience" },
-      { value: "Distributed", label: "Systems" },
-      { value: "AI", label: "Platforms" },
-      { value: "Remote", label: "Native" },
+      { value: "15+", label: "Years Experience" },
+      { value: "30+", label: "Companies" },
+      { value: "25%+", label: "Delivery Gains" },
+      { value: "50%+", label: "Incident Reduction" },
     ],
   },
   services: {
     label: "Services",
     cards: [
       {
-        title: "Architecture & Platform Assessment",
+        title: "Architecture & Platform Review",
         description:
-          "A focused engagement (2–6 weeks) to diagnose architecture and platform health, identify highest-leverage problems, and produce a clear, prioritized action plan. Deliverable: a report and workshop your team can act on immediately.",
+          "A focused engagement (2–6 weeks) to evaluate architecture and platform health, identify key architectural issues and produce a prioritized action plan.<br><br>Deliverable: a clear report and working session your team can act on immediately.",
       },
       {
-        title: "Fractional Principal Architect",
+        title: "Fractional Principal Engineer",
         description:
-          "Ongoing part-time engagement (up to 3 days/week) providing senior architectural guidance across system design, technical decision-making, engineering mentorship, and platform evolution. I embed with your leadership and senior engineers, not above them.",
+          "Ongoing part-time engagement (up to 3 days/week) providing senior architectural guidance across system design, technical decision-making, engineering mentorship, and platform evolution.<br><br>I work alongside your leadership and senior engineers, not above them.",
       },
       {
-        title: "Platform Transformation Support",
+        title: "Platform Transformation",
         description:
-          "Advisory and hands-on support during high-stakes platform initiatives: migrations, re-architectures, scaling initiatives, or post-acquisition integration. Scoped to the initiative.",
+          "Advisory and hands-on support for high-stakes platform initiatives: migrations, re-architectures, scaling challenges, or post-acquisition integrations.<br><br>Scoped to the initiative, with a focus on architecture decisions and delivery risks.",
       },
     ],
     cta: {
-      title: "Not sure which fits? Let's figure it out together.",
+      title: "Not sure which fits? Let's talk.",
       description:
         "Every engagement starts with a conversation. We define your goals, map the constraints, and shape the scope around the outcome you actually need — not a fixed package.",
     },
@@ -128,11 +137,11 @@ export const en: Translations = {
   contact: {
     label: "Get in touch",
     intro:
-      "Part-time, remote-first. On-site visits available for workshops and kickoffs. Typical engagement: 1 to 6 months, scoped to a clear outcome. Whether you're a co-founder, CTO, or executive navigating a technical inflection point — I'd be glad to hear from you.",
+      "Part-time, remote-first. On-site visits available for workshops and kickoffs. Typical engagement: 1–6 months, scoped to a clear outcome.<br><br>If you're a co-founder, CTO, or engineering leader navigating a technical inflection point, feel free to reach out.",
     bookTitle: "Book a 30-min call",
-    bookSubtext: "Pick a time that works for you — no commitment.",
-    linkedinTitle: "Follow me there",
-    linkedinLink: "linkedin.com/in/benjamin-bellantonio →",
+    bookSubtext: "Pick a time that works for you — no preparation needed.",
+    linkedinTitle: "Connect on LinkedIn",
+    linkedinLink: "linkedin.com/in/benjamin-bellantonio",
     formTitle: "Send a message",
     formName: "Name",
     formEmail: "Email",
@@ -143,6 +152,6 @@ export const en: Translations = {
     formError: "Something went wrong. Please try again or email me directly.",
   },
   footer: {
-    name: "Benjamin Bellantonio",
+    name: "Benjamin Bellantonio, Principal Engineer & Fractional Technology Advisor, Marseille, France",
   },
 };

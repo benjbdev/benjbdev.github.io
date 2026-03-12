@@ -14,7 +14,7 @@ const { t } = Astro.props;
       <div class="font-sans text-xl font-bold uppercase tracking-wide text-[#1a1a1a]">{t.about.label}</div>
       <div>
         <p class="font-mono text-base leading-relaxed text-[#555] mb-8 fade-in-hidden">
-          {t.about.bio}
+          <span set:html={t.about.bio} />
         </p>
 
         <h3 class="font-sans text-base font-semibold mb-3 fade-in-hidden">

@@ -26,7 +26,7 @@ const cardBgs = [
                 {card.title}
               </h3>
               <p class="font-mono text-sm leading-relaxed text-[#1a1a1a]">
-                {card.description}
+                <span set:html={card.description} />
               </p>
             </div>
           ))}

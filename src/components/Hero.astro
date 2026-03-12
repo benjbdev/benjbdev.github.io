@@ -16,9 +16,20 @@ const { t } = Astro.props;
     </h1>
 
     <div>
-      <p class="font-mono text-sm leading-relaxed text-[#555] mb-8">
-        {t.hero.subtitle}
+      <p class="font-mono text-sm leading-relaxed text-[#555] mb-6">
+        <span set:html={t.hero.subtitle} />
       </p>
+      <div class="mb-8">
+        <p class="font-mono text-xs uppercase tracking-widest text-[#888] mb-3">{t.hero.whenTitle}</p>
+        <ul class="space-y-1">
+          {t.hero.whenList.map((item) => (
+            <li class="font-mono text-sm text-[#555] flex gap-2">
+              <span class="text-[#888]">•</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
       <div class="flex flex-wrap gap-4 items-center">
         <a
           href="#services"

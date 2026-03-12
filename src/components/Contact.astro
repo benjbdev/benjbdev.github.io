@@ -17,7 +17,7 @@ const bookCallUrl = import.meta.env.PUBLIC_BOOK_CALL_URL;
       <div class="font-sans text-xl font-bold uppercase tracking-wide text-white">{t.contact.label}</div>
       <div>
         <p class="font-mono text-base leading-relaxed text-[#999] mb-10 fade-in-hidden">
-          {t.contact.intro}
+          <span set:html={t.contact.intro}/>
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 fade-in-hidden">

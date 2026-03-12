@@ -3,9 +3,9 @@ import type { Translations } from "./en";
 export const fr: Translations = {
   meta: {
     title:
-      "Benjamin Bellantonio — Architecte Principal & Conseiller Technologique",
+      "Benjamin Bellantonio | Principal Engineer & Fractional Technology Advisor | Marseille, France",
     description:
-      "Architecte Principal et Conseiller Technologique, j'aide les sociétés produit à naviguer les décisions critiques d'architecture et de plateforme.",
+      "Principal Engineer & Fractional Technology Advisor aidant les entreprises produit à naviguer les décisions critiques d’ingénierie et d’architecture à mesure que leurs systèmes et équipes évoluent.",
   },
   nav: {
     logo: "b.",
@@ -16,78 +16,85 @@ export const fr: Translations = {
     switchLang: "Passer en",
   },
   hero: {
-    greeting: "Bonjour, je suis Benjamin 🤓",
+    greeting: "Bonjour, je suis Benjamin.",
     tagline:
-      'Architecte principal et <br class="hidden sm:block">conseiller technologique.',
+      'Principal Engineer & <br class="hidden sm:block">Fractional Technology Advisor',
     subtitle:
-      "J'aide les sociétés produit à naviguer les décisions critiques d'architecture et de plateforme à mesure que leurs systèmes et équipes évoluent — pas comme un consultant qui remet un rapport et disparaît, mais comme un vrai partenaire technique senior.",
-    cta1: "Voir mes services",
-    cta2: "Me contacter",
+      "J’aide les entreprises produit à naviguer des <strong>décisions critiques d’ingénierie et d’architecture</strong> à mesure que leurs systèmes et équipes grandissent — non pas comme un consultant qui livre un rapport, mais comme un <strong>partenaire technique senior travaillant aux côtés des CTOs et des responsables engineering</strong>.",
+    whenTitle: "Typiquement sollicité lorsque :",
+    whenList: [
+      "l’architecture commence à ralentir la vélocité produit",
+      "les systèmes deviennent difficiles à faire évoluer",
+      "le leadership technique senior manque",
+    ],
+    cta1: "Comment j’aide",
+    cta2: "Discuter de votre situation",
   },
   about: {
     label: "À propos",
-    bio: "Plus de 15 ans à concevoir et opérer des systèmes distribués en production. Dernièrement Directeur Technique chez CoachHub, bras droit technique du CPTO — pilotant la direction architecturale des systèmes backend, animant la conception de systèmes transverses, et livrant AIMY, une plateforme de coaching IA event-driven, de zéro à la production en 6 mois. Expérience en startups early-stage et scale-ups en France, en Malaisie et à l'international. Remote-native.",
-    whenTitle: "Quand les entreprises font appel à moi",
+    bio: "15+ ans à concevoir et opérer des <strong>systèmes distribués en production</strong>.<br><br>Dans plusieurs entreprises, j’ai occupé des rôles de <strong>Staff / Principal engineer et leader technologique</strong>, agissant souvent comme <strong>bras droit technique de CTOs ou CPTOs</strong> — en charge de l’architecture des plateformes backend et des décisions techniques transverses.<br><br>Expérience dans des <strong>startups early-stage jusqu’aux scale-ups</strong>, avec des équipes en France, en Malaisie et à l’international. <strong>Remote-native</strong>.",
+    whenTitle: "Situations typiques",
     whenList: [
-      "Vous construisez vite et avez besoin de fondations architecturales qui ne deviendront pas un goulot d'étranglement en Série A",
-      "Vous scalez vite et l'architecture commence à craquer sous la pression",
-      "Vous réorganisez l'engineering et personne ne s'entend sur la propriété des services ou les frontières d'équipes",
-      "Vous perdez de la vélocité produit face à la dette technique accumulée",
-      "Un architecte clé vient de partir et l'équipe a besoin de continuité technique senior",
-      "Sur-dépendance aux vendors tiers sans propriété claire ni chemin de sortie",
-      "Évaluation d'une évolution majeure de plateforme — migration cloud, intégration IA, consolidation microservices",
+      "la croissance met l’architecture sous pression",
+      "la vélocité produit ralentit à cause de la dette technique",
+      "les responsabilités entre équipes ou services ne sont pas claires",
+      "les fondations techniques risquent de devenir un frein à la Series A",
+      "un architecte ou principal engineer clé vient de partir",
+      "une évolution majeure de plateforme est envisagée — cloud, IA, microservices",
+      "une dépendance excessive à des vendors sans stratégie de sortie claire",
     ],
     stats: [
-      { value: "15+", label: "Ans d'expérience" },
-      { value: "Distribué", label: "Systèmes" },
-      { value: "IA", label: "Plateformes" },
-      { value: "Remote", label: "Native" },
+      { value: "15+", label: "Années d’expérience" },
+      { value: "30+", label: "Entreprises" },
+      { value: "25%+", label: "Gains de vélocité" },
+      { value: "50%+", label: "Réduction d’incidents" },
     ],
   },
   services: {
     label: "Services",
     cards: [
       {
-        title: "Architecture & Audit de Plateforme",
+        title: "Revue Architecture & Plateforme",
         description:
-          "Un engagement focalisé (2–6 semaines) pour diagnostiquer la santé de votre architecture et plateforme, identifier les problèmes à fort levier, et produire un plan d'action clair et priorisé. Livrable : un rapport et un workshop sur lequel votre équipe peut agir immédiatement.",
+          "Une mission ciblée (2–6 semaines) pour évaluer l’architecture et la santé de la plateforme, identifier les principaux problèmes et produire un plan d’action priorisé.<br><br>Livrable : un rapport clair et une session de travail directement exploitable par l’équipe.",
       },
       {
-        title: "Architecte Principal Fractionnel",
+        title: "Fractional Principal Engineer",
         description:
-          "Engagement part-time continu (jusqu'à 3 jours/semaine) apportant une guidance architecturale senior sur la conception système, la prise de décision technique, le mentoring engineering, et l'évolution de plateforme. Je m'intègre avec vos leaders et ingénieurs senior, pas au-dessus d'eux.",
+          "Engagement part-time (jusqu’à 3 jours/semaine) apportant un leadership architectural senior sur la conception système, les décisions techniques, le mentorat engineering et l’évolution de plateforme.<br><br>Je travaille aux côtés de votre leadership et de vos ingénieurs seniors, pas au-dessus.",
       },
       {
-        title: "Support de Transformation Plateforme",
+        title: "Transformation de Plateforme",
         description:
-          "Conseil et support opérationnel sur des initiatives de plateforme critiques : migrations, re-architectures, initiatives de scaling, ou intégration post-acquisition. Cadré sur l'initiative.",
+          "Conseil et support opérationnel pour des initiatives critiques : migrations, réarchitectures, problèmes de passage à l’échelle ou intégrations post-acquisition.<br><br>Mission définie autour de l’initiative, avec un focus sur les décisions d’architecture et les risques delivery.",
       },
     ],
     cta: {
-      title: "Pas sûr de ce qu'il vous faut ? Définissons-le ensemble.",
+      title: "Pas sûr de ce qui correspond ? Parlons-en.",
       description:
-        "Chaque engagement commence par une conversation. On définit vos objectifs, on cartographie les contraintes, et on façonne le périmètre autour du résultat dont vous avez vraiment besoin — pas un forfait figé.",
+        "Chaque engagement commence par une discussion. Nous clarifions vos objectifs, les contraintes, et définissons le scope autour du résultat réellement attendu — pas d’un package figé.",
     },
   },
   contact: {
-    label: "Me contacter",
+    label: "Prendre contact",
     intro:
-      "Temps partiel, remote-first. Déplacements possibles pour workshops et kickoffs. Engagement typique : 1 à 6 mois, cadré sur un résultat précis. Co-fondateur, CTO, ou dirigeant face à un point d'inflexion technique — je serai ravi d'échanger avec vous.",
+      "Part-time, remote-first. Déplacements possibles pour workshops et kickoffs. Engagement typique : 1–6 mois, défini autour d’un objectif clair.<br><br>Si vous êtes co-fondateur, CTO ou responsable engineering confronté à un point d’inflexion technique, n’hésitez pas à me contacter.",
     bookTitle: "Réserver un appel de 30 min",
-    bookSubtext: "Choisissez un créneau — sans engagement.",
-    linkedinTitle: "Me suivre",
-    linkedinLink: "linkedin.com/in/benjamin-bellantonio →",
+    bookSubtext:
+      "Choisissez un créneau qui vous convient — aucune préparation nécessaire.",
+    linkedinTitle: "Se connecter sur LinkedIn",
+    linkedinLink: "linkedin.com/in/benjamin-bellantonio",
     formTitle: "Envoyer un message",
     formName: "Nom",
     formEmail: "Email",
     formCompany: "Entreprise (optionnel)",
     formMessage: "Message",
-    formSubmit: "Envoyer le message",
-    formSuccess: "Message envoyé ! Je vous répondrai sous peu.",
+    formSubmit: "Envoyer",
+    formSuccess: "Message envoyé ! Je reviens vers vous rapidement.",
     formError:
-      "Une erreur s'est produite. Veuillez réessayer ou me contacter par email.",
+      "Une erreur est survenue. Réessayez ou contactez-moi directement par email.",
   },
   footer: {
-    name: "Benjamin Bellantonio",
+    name: "Benjamin Bellantonio, Principal Engineer & Fractional Technology Advisor, Marseille, France",
   },
 };
