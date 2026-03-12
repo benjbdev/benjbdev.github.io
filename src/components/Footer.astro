@@ -6,16 +6,102 @@ interface Props {
 }
 
 const { t } = Astro.props;
+const m = t.footer.modal;
 ---
 
 <footer class="py-8 bg-[#1a1a1a]">
-  <div class="max-w-[1024px] mx-auto px-6">
+  <div class="max-w-[1024px] mx-auto px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
     <span class="font-sans text-xs text-[#888]">
       © <span id="footer-year"></span> {t.footer.name}
     </span>
+    <button
+      id="legal-btn"
+      class="font-sans text-xs text-[#888] underline underline-offset-2 hover:text-white transition-colors cursor-pointer bg-transparent border-none p-0 self-start sm:self-auto"
+    >
+      {t.footer.legalLink}
+    </button>
   </div>
 </footer>
 
+<dialog
+  id="legal-dialog"
+  class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 m-0 max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-lg p-8 bg-white shadow-xl backdrop:bg-black/50"
+>
+  <div class="flex items-start justify-between mb-4">
+    <h2 class="font-sans text-lg font-semibold text-[#1a1a1a]">{m.title}</h2>
+    <button
+      id="legal-close"
+      class="font-sans text-[#888] hover:text-[#1a1a1a] transition-colors text-xl leading-none cursor-pointer bg-transparent border-none p-0 ml-4"
+      aria-label="Close"
+    >×</button>
+  </div>
+
+  <hr class="border-[#e0e0e0] mb-6" />
+
+  <div class="font-sans text-sm text-[#1a1a1a] space-y-6">
+    <section>
+      <h3 class="font-mono text-xs uppercase tracking-widest text-[#888] mb-3">{m.legalTitle}</h3>
+      <p class="text-[#555] mb-3" set:html={m.legalIntro} />
+      <dl class="space-y-2">
+        <div class="flex gap-2">
+          <dt class="font-semibold min-w-[100px]">{m.statusLabel}</dt>
+          <dd class="text-[#555]">{m.statusValue}</dd>
+        </div>
+        <div class="flex gap-2">
+          <dt class="font-semibold min-w-[100px]">{m.activityLabel}</dt>
+          <dd class="text-[#555]">{m.activityValue}</dd>
+        </div>
+        <div class="flex gap-2">
+          <dt class="font-semibold min-w-[100px]">{m.siretLabel}</dt>
+          <dd class="text-[#555]">{m.siretValue}</dd>
+        </div>
+        <div class="flex gap-2">
+          <dt class="font-semibold min-w-[100px]">{m.locationLabel}</dt>
+          <dd class="text-[#555]">{m.locationValue}</dd>
+        </div>
+        <div class="flex gap-2">
+          <dt class="font-semibold min-w-[100px]">{m.hostingLabel}</dt>
+          <dd class="text-[#555]" set:html={m.hostingValue} />
+        </div>
+      </dl>
+    </section>
+
+    <hr class="border-[#e0e0e0]" />
+
+    <section>
+      <h3 class="font-mono text-xs uppercase tracking-widest text-[#888] mb-3">{m.privacyTitle}</h3>
+      <p class="text-[#555] mb-3">{m.privacyP1}</p>
+      <p class="text-[#555] mb-3">{m.privacyP2}</p>
+      <p class="text-[#555] mb-3">{m.privacyP3}</p>
+      <p class="text-[#555]" set:html={m.privacyP4} />
+    </section>
+
+    <hr class="border-[#e0e0e0]" />
+
+    <section>
+      <h3 class="font-mono text-xs uppercase tracking-widest text-[#888] mb-3">{m.commsTitle}</h3>
+      <p class="text-[#555] mb-3">{m.commsP1}</p>
+      <p class="text-[#555]" set:html={m.commsP2} />
+    </section>
+  </div>
+</dialog>
+
 <script is:inline>
   document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  var btn = document.getElementById('legal-btn');
+  var dialog = document.getElementById('legal-dialog');
+  var closeBtn = document.getElementById('legal-close');
+
+  btn.addEventListener('click', function() { dialog.showModal(); });
+  closeBtn.addEventListener('click', function() { dialog.close(); });
+  dialog.addEventListener('click', function(e) {
+    var rect = dialog.getBoundingClientRect();
+    var outside =
+      e.clientX < rect.left ||
+      e.clientX > rect.right ||
+      e.clientY < rect.top ||
+      e.clientY > rect.bottom;
+    if (outside) dialog.close();
+  });
 </script>

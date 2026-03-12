@@ -56,6 +56,30 @@ export interface Translations {
   };
   footer: {
     name: string;
+    legalLink: string;
+    modal: {
+      title: string;
+      legalTitle: string;
+      legalIntro: string;
+      statusLabel: string;
+      statusValue: string;
+      activityLabel: string;
+      activityValue: string;
+      siretLabel: string;
+      siretValue: string;
+      locationLabel: string;
+      locationValue: string;
+      hostingLabel: string;
+      hostingValue: string;
+      privacyTitle: string;
+      privacyP1: string;
+      privacyP2: string;
+      privacyP3: string;
+      privacyP4: string;
+      commsTitle: string;
+      commsP1: string;
+      commsP2: string;
+    };
   };
 }
 
@@ -153,5 +177,29 @@ export const en: Translations = {
   },
   footer: {
     name: "Benjamin Bellantonio, Principal Engineer & Fractional Technology Advisor, Marseille, France",
+    legalLink: "Legal & Privacy",
+    modal: {
+      title: "Legal & Privacy",
+      legalTitle: "Legal Information",
+      legalIntro: "This website is operated by <strong>Benjamin Bellantonio</strong>, independent technology advisor.",
+      statusLabel: "Status",
+      statusValue: "Individual Entrepreneur (Micro-entrepreneur)",
+      activityLabel: "Activity",
+      activityValue: "IT systems and software consulting",
+      siretLabel: "SIRET",
+      siretValue: "532 734 928 00056",
+      locationLabel: "Location",
+      locationValue: "Marseille, France",
+      hostingLabel: "Hosting",
+      hostingValue: 'GitHub Pages – GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, United States — <a href="https://pages.github.com" class="underline">pages.github.com</a>',
+      privacyTitle: "Confidentiality & Data Protection",
+      privacyP1: "If you contact me through this website or by email, the information you provide (such as your name, email address, and message content) is used solely to respond to your request or discuss a potential collaboration.",
+      privacyP2: "No personal data is sold, shared with third parties, or used for marketing purposes.",
+      privacyP3: "Information may be retained only for the time necessary to handle the discussion or potential professional engagement.",
+      privacyP4: "In accordance with the <strong>General Data Protection Regulation (GDPR)</strong>, you have the right to request access, correction, or deletion of your personal data.",
+      commsTitle: "Professional Communication",
+      commsP1: "Information shared through this website or during initial discussions is treated with professional discretion.",
+      commsP2: "However, unless explicitly agreed otherwise, communication through the contact form or email does <strong>not constitute a formal confidentiality agreement (NDA)</strong>.",
+    },
   },
 };
